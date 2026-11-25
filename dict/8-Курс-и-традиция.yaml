@@ -1,0 +1,194 @@
+# Випассана::8 Курс и традиция: 12 cards. Source of the Anki deck; build.py reads this file (see deck/ for the rest of the package).
+#
+# One entry per note. Text keys (term, reading, translation, explanation) are plain text; build.py makes the HTML.
+# parents:   headword of a parent card, or {section: <title>} = the root of that tree section (a subdeck title);
+#            the order of the list is the order of the tree paths on the card.
+# children:  headwords, the order of "Включает". see_also: headwords, the order of "Связи".
+# opposites: headwords, or {term: ..., gloss: ...} for an opposite that has no card; the order of "Противоположность".
+# nid, cid, guid: the ids of the note and the card; keep them, Anki matches notes by them.
+# Tags are not stored: build.py derives them from the tree (subdeck, ancestors, headword).
+#
+# Order of the entries = study order of this subdeck: a card stands after its parents, a child after its parent
+# in the order of "Включает". build.py numbers `due` in this order (study_order), subdecks in the order 1..9.
+# build.py stops if two cards have the same headword, a reference is unknown, or a relation is one-sided
+# (parents <-> children, see_also <-> see_also, opposites <-> opposites).
+
+- term: tisaraṇa
+  reading: тиса́рана
+  translation: три прибежища
+  explanation: Buddhaṃ / Dhammaṃ / Saṅghaṃ saraṇaṃ gacchāmi — «Принимаю прибежище в Бу́дде / Дха́мме / Са́нгхе». Произносится в начале курса.
+  parents:
+  - section: Курс и традиция
+  children: []
+  see_also:
+  - tiratana
+  - Namo tassa bhagavato arahato sammā-sambuddhassa
+  - saraṇa
+  opposites: []
+  nid: 1794139124538
+  cid: 1794139124539
+  guid: 'o,zY,HpVDB'
+- term: Namo tassa bhagavato arahato sammā-sambuddhassa
+  reading: На́мо та́сса бхага́вато ара́хато са́мма-самбуддха́сса
+  translation: Почтение Ему — Благословенному, Достойному, Полностью Самопробуждённому
+  explanation: Традиционная формула почтения Бу́дде; в су́ттах её трижды произносит, например, брахманка Dhanañjānī (SN 7.1). На курсе повторяется трижды перед прибежищем (tisaraṇa) и предписаниями (sīla).
+  parents:
+  - section: Курс и традиция
+  children: []
+  see_also:
+  - Buddha
+  - tisaraṇa
+  opposites: []
+  nid: 1794139124540
+  cid: 1794139124541
+  guid: 'Nn_J;q<[mb'
+- term: sādhu
+  reading: са́дху
+  translation: «хорошо!», «хорошо сказано»
+  explanation: Возглас одобрения и сорадования (muditā) — обычно трижды, после беседы о Дха́мме или пожелания добра.
+  parents:
+  - section: Курс и традиция
+  children: []
+  see_also:
+  - Bhavatu sabba maṅgalaṃ
+  - muditā
+  opposites: []
+  nid: 1794139124542
+  cid: 1794139124543
+  guid: 'J|[OxnFaA5'
+- term: Bhavatu sabba maṅgalaṃ
+  reading: Бха́вату са́бба ма́нгалам
+  translation: Да будет всякое благо
+  explanation: Пожелание, которым завершаются записанные медитации и беседы Гое́нки; в ответ говорят «sādhu».
+  parents:
+  - section: Курс и традиция
+  children: []
+  see_also:
+  - mettā
+  - sādhu
+  opposites: []
+  nid: 1794139124544
+  cid: 1794139124545
+  guid: 'C~6m.=`03S'
+- term: Sabbe sattā bhavantu sukhitattā
+  reading: Са́ббе са́тта бхава́нту сукхита́тта
+  translation: Да будут все существа счастливы
+  explanation: Строка из Karaṇīya Mettā Sutta (Snp 1.8; в издании Mahāsaṅgīti — sabbasattā bhavantu sukhitattā); формула mettā — пожелание счастья всем существам без исключения.
+  parents:
+  - section: Курс и традиция
+  children: []
+  see_also:
+  - mettā-bhāvanā
+  - mettā
+  - Sutta-nipāta
+  opposites: []
+  nid: 1794139124546
+  cid: 1794139124547
+  guid: 'sKljTn}@<+'
+- term: Aniccā vata saṅkhārā
+  reading: Ани́чча ва́та санкха́ра
+  translation: Поистине непостоянны формирования
+  explanation: 'Начало строфы из DN 16. Продолжение: «их природа — возникать и исчезать (uppāda-vaya-dhammino); возникнув, они прекращаются (uppajjitvā nirujjhanti); их умиротворение — счастье (tesaṃ vūpasamo sukho)».'
+  parents:
+  - section: Курс и традиция
+  children: []
+  see_also:
+  - anicca
+  - saṅkhāra
+  - nibbāna
+  opposites: []
+  nid: 1794139124548
+  cid: 1794139124549
+  guid: 'o.STCF]gI3'
+- term: ariyo tuṇhībhāvo
+  reading: а́рийо тунхибха́во
+  translation: благородная тишина (благородное молчание)
+  explanation: '«Либо беседа о Дха́мме, либо благородное молчание» (dhammī vā kathā ariyo vā tuṇhībhāvo, MN 26). На курсе Гое́нки — тишина тела, речи и ума: без разговоров, жестов и записок; вопросы — только учителю и менеджеру.'
+  parents:
+  - section: Курс и традиция
+  children: []
+  see_also:
+  - sammā-vācā
+  - sīla
+  opposites: []
+  nid: 1794139124550
+  cid: 1794139124551
+  guid: 's1viTjytB>'
+- term: ācariya
+  reading: ача́рия
+  translation: учитель
+  explanation: Учитель Дха́ммы. Курсы ведут помощники учителя (sahāyaka ācariya) по записанным наставлениям Гое́нки.
+  parents:
+  - section: Курс и традиция
+  children: []
+  see_also:
+  - kalyāṇamitta
+  - dhamma-sevaka
+  - paramparā
+  opposites: []
+  nid: 1794139124552
+  cid: 1794139124553
+  guid: 'Ibh&fo|$9m'
+- term: dhamma-sevaka
+  reading: дха́мма-се́вака
+  translation: служитель Дха́ммы
+  explanation: 'Термин традиции Гое́нки: волонтёр, обслуживающий курс (жен. dhamma-sevikā), — кухня, порядок, помощь студентам. Служение (dhamma-sevā) — практика dāna и mettā.'
+  parents:
+  - section: Курс и традиция
+  children: []
+  see_also:
+  - mettā
+  - dāna
+  - ācariya
+  - dhammadāna
+  opposites: []
+  nid: 1794139124554
+  cid: 1794139124555
+  guid: 'L9V*6oF!dv'
+- term: kalyāṇamitta
+  reading: кальянами́тта
+  translation: благой друг
+  explanation: Духовный друг и наставник. Бу́дда назвал добрую дружбу (kalyāṇamittatā) «всей святой жизнью» (sakalaṃ brahmacariyaṃ, SN 45.2).
+  parents:
+  - section: Курс и традиция
+  children: []
+  see_also:
+  - Saṅgha
+  - sappurisa-saṃseva
+  - ācariya
+  - dhammadāna
+  - paramparā
+  opposites: []
+  nid: 1794139124556
+  cid: 1794139124557
+  guid: 'Asg4@4CS^i'
+- term: Theravāda
+  reading: Тхерава́да
+  translation: «учение старейшин»
+  explanation: Букв. «учение старейшин» (thera + vāda). Школа буддизма, которая хранит канон на языке пали (Tipiṭaka).
+  parents:
+  - section: Курс и традиция
+  children: []
+  see_also:
+  - Pāḷi
+  - Tipiṭaka
+  - Visuddhimagga
+  opposites: []
+  nid: 1795473553078
+  cid: 1795473553079
+  guid: 'nS`Ngeuilr'
+- term: paramparā
+  reading: пара́мпара
+  translation: преемственность (линия учителей)
+  explanation: 'Передача от учителя к ученику. В традиции Гое́нки — линия: Леди Сая́до, Сайя Тхетджи, Саяджи У Ба Кхин, С. Н. Гое́нка. В AN 3.65 Бу́дда советует не полагаться на одну лишь преемственность (paramparā), а проверять самому.'
+  parents:
+  - section: Курс и традиция
+  children: []
+  see_also:
+  - Kālāma Sutta
+  - ācariya
+  - kalyāṇamitta
+  opposites: []
+  nid: 1795473553154
+  cid: 1795473553155
+  guid: 'q&DHkl-uf^'

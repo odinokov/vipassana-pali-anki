@@ -1,0 +1,520 @@
+# Випассана::5 Загрязнения: 29 cards. Source of the Anki deck; build.py reads this file (see deck/ for the rest of the package).
+#
+# One entry per note. Text keys (term, reading, translation, explanation) are plain text; build.py makes the HTML.
+# parents:   headword of a parent card, or {section: <title>} = the root of that tree section (a subdeck title);
+#            the order of the list is the order of the tree paths on the card.
+# children:  headwords, the order of "Включает". see_also: headwords, the order of "Связи".
+# opposites: headwords, or {term: ..., gloss: ...} for an opposite that has no card; the order of "Противоположность".
+# nid, cid, guid: the ids of the note and the card; keep them, Anki matches notes by them.
+# Tags are not stored: build.py derives them from the tree (subdeck, ancestors, headword).
+#
+# Order of the entries = study order of this subdeck: a card stands after its parents, a child after its parent
+# in the order of "Включает". build.py numbers `due` in this order (study_order), subdecks in the order 1..9.
+# build.py stops if two cards have the same headword, a reference is unknown, or a relation is one-sided
+# (parents <-> children, see_also <-> see_also, opposites <-> opposites).
+
+- term: kilesa
+  reading: киле́са
+  translation: загрязнения ума
+  explanation: 'Состояния, которые пачкают и мучают ум. В Абхидха́мме (Dhammasaṅgaṇī) их десять: жадность (lobha), ненависть (dosa), заблуждение (moha), самомнение (māna), ложные воззрения (diṭṭhi), сомнение (vicikicchā), вялость (thīna), беспокойство (uddhacca), бесстыдство (ahirika) и отсутствие страха перед дурным (anottappa).'
+  parents:
+  - section: Загрязнения
+  children:
+  - akusala-mūla
+  - māna
+  - diṭṭhi
+  - vicikicchā
+  - uddhacca
+  - ahirika
+  - anottappa
+  see_also:
+  - akusala
+  - nīvaraṇa
+  - anusaya
+  - āsava
+  - Abhidhamma-piṭaka
+  opposites: []
+  nid: 1794139124344
+  cid: 1794139124345
+  guid: 'zV4%e$451r'
+- term: akusala-mūla
+  reading: аку́сала-му́ла
+  translation: три корня неблагого
+  explanation: Жадность (lobha), ненависть (dosa) и заблуждение (moha) — корни всех неблагих (akusala) состояний и поступков.
+  parents:
+  - kilesa
+  children:
+  - lobha
+  - dosa
+  - moha
+  see_also:
+  - akusala
+  opposites:
+  - kusala-mūla
+  nid: 1794139124346
+  cid: 1794139124347
+  guid: 'we!<KNr_hp'
+- term: lobha
+  reading: ло́бха
+  translation: жадность
+  explanation: Желание обладать, влечение; у Гое́нки — реакция на приятное ощущение (sukhā vedanā). Синоним — rāga.
+  parents:
+  - akusala-mūla
+  children: []
+  see_also:
+  - rāga
+  - taṇhā
+  - sukhā vedanā
+  - kāmacchanda
+  opposites:
+  - alobha
+  nid: 1794139124348
+  cid: 1794139124349
+  guid: 't7IQ}$!ikY'
+- term: dosa
+  reading: до́са
+  translation: отвращение, ненависть
+  explanation: Неприязнь, гнев (kodha), отторжение (paṭigha); у Гое́нки — реакция на неприятное ощущение (dukkhā vedanā).
+  parents:
+  - akusala-mūla
+  children: []
+  see_also:
+  - byāpāda
+  - paṭigha
+  - dukkhā vedanā
+  - vibhava-taṇhā
+  opposites:
+  - adosa
+  - mettā
+  nid: 1794139124350
+  cid: 1794139124351
+  guid: 'uv7[=aJ^`U'
+- term: moha
+  reading: мо́ха
+  translation: заблуждение
+  explanation: Неясность ума, незнание истинной природы явлений; синоним avijjā.
+  parents:
+  - akusala-mūla
+  children: []
+  see_also:
+  - avijjā
+  - adukkhamasukhā vedanā
+  - ahirika
+  - anottappa
+  opposites:
+  - amoha
+  - paññā
+  nid: 1794139124352
+  cid: 1794139124353
+  guid: 'o?h)^]wGP,'
+- term: ahirika
+  reading: ахи́рика
+  translation: бесстыдство
+  explanation: Отсутствие стыда перед дурным, нечуткость совести (hirī). В AN 2.7 — парой с anottappa; в Абхидха́мме — один из десяти kilesa и сопровождает каждое неблагое состояние ума.
+  parents:
+  - kilesa
+  children: []
+  see_also:
+  - anottappa
+  - akusala
+  - moha
+  opposites:
+  - term: hirī
+    gloss: стыд перед дурным, совесть
+  nid: 1795473553132
+  cid: 1795473553133
+  guid: 'p_W>3C,;=?'
+- term: anottappa
+  reading: анотта́ппа
+  translation: отсутствие страха перед дурным
+  explanation: Отсутствие боязни последствий дурного (ottappa). Пара к ahirika (AN 2.7); в Абхидха́мме — один из десяти kilesa и сопровождает каждое неблагое состояние ума.
+  parents:
+  - kilesa
+  children: []
+  see_also:
+  - ahirika
+  - akusala
+  - moha
+  opposites:
+  - term: ottappa
+    gloss: боязнь дурного, осмотрительность
+  nid: 1795473553134
+  cid: 1795473553135
+  guid: 'D0D?k{-2>3'
+- term: rāga
+  reading: ра́га
+  translation: страсть, влечение
+  explanation: Синоним lobha; у Гое́нки — реакция на приятное ощущение (sukhā vedanā). Входит в тройку rāga, dosa, moha; там же rāga, как и taṇhā, передаётся словом «жажда».
+  parents:
+  - section: Загрязнения
+  children: []
+  see_also:
+  - lobha
+  - taṇhā
+  - kāmarāga
+  opposites: []
+  nid: 1794139124354
+  cid: 1794139124355
+  guid: 'QjQk[=Of;['
+- term: anusaya
+  reading: ану́сая
+  translation: скрытые склонности
+  explanation: 'Спящие предрасположенности ума, которые пробуждаются ощущениями (vedanā): к страсти (rāga) — при приятном, к отторжению (paṭigha) — при неприятном, к неведению (avijjā) — при нейтральном. Всего их семь (AN 7.11): kāmarāga, paṭigha, diṭṭhi, vicikicchā, māna, bhavarāga, avijjā.'
+  parents:
+  - section: Загрязнения
+  children:
+  - kāmarāga
+  - paṭigha
+  - diṭṭhi
+  - vicikicchā
+  - māna
+  - bhavarāga
+  - avijjā
+  see_also:
+  - vedanā
+  - kilesa
+  - saṅkhāra
+  - adukkhamasukhā vedanā
+  - āsava
+  opposites: []
+  nid: 1794139124356
+  cid: 1794139124357
+  guid: 'Dgt1;FL4`f'
+- term: diṭṭhi
+  reading: ди́ттхи
+  translation: воззрение; ложное воззрение
+  explanation: Взгляд, мнение; чаще — ложный взгляд, за который цепляются. В Абхидха́мме входит в десять kilesa (Dhammasaṅgaṇī); в AN 7.11 — diṭṭhānusaya, одна из семи скрытых склонностей.
+  parents:
+  - kilesa
+  - anusaya
+  children: []
+  see_also:
+  - sakkāya-diṭṭhi
+  - upādāna
+  - vicikicchā
+  - sammā-diṭṭhi
+  opposites: []
+  nid: 1795473553130
+  cid: 1795473553131
+  guid: 'Ou=Qtd_9~`'
+- term: bhavarāga
+  reading: бхавара́га
+  translation: страсть к существованию
+  explanation: Влечение к существованию (bhava + rāga); шестая из семи скрытых склонностей — bhavarāgānusayo (AN 7.11). В SN 22.102 восприятие непостоянства (aniccasaññā) устраняет и kāmarāga, и rūparāga, и bhavarāga.
+  parents:
+  - anusaya
+  children: []
+  see_also:
+  - bhava-taṇhā
+  - rūparāga
+  - arūparāga
+  - anicca
+  opposites: []
+  nid: 1795473553140
+  cid: 1795473553141
+  guid: 'yrBHaXI&H-'
+- term: āsava
+  reading: а́сава
+  translation: глубинные загрязнения, «истечения»
+  explanation: 'Самые глубокие загрязнения, «вытекающие» из ума: влечение к чувственному (kāmāsava), к существованию (bhavāsava) и неведение (avijjāsava) — так в DN 33; Абхидха́мма добавляет четвёртое, воззрения (diṭṭhāsava). Их уничтожение (āsavakkhaya) — признак арха́та (arahant).'
+  parents:
+  - section: Загрязнения
+  children: []
+  see_also:
+  - kilesa
+  - anusaya
+  - arahant
+  opposites: []
+  nid: 1794139124358
+  cid: 1794139124359
+  guid: 'ic^p7UKN*j'
+- term: nīvaraṇa
+  reading: нива́рана
+  translation: пять препятствий
+  explanation: Помехи, которые застилают ум и мешают сосредоточению (samādhi) и прозрению (vipassanā). Их распознавание — часть dhammānupassanā.
+  parents:
+  - section: Загрязнения
+  children:
+  - kāmacchanda
+  - byāpāda
+  - thīna-middha
+  - uddhacca-kukkucca
+  - vicikicchā
+  see_also:
+  - kilesa
+  - satta bojjhaṅgā
+  - dhammānupassanā
+  - upacāra samādhi
+  - citta-visuddhi
+  opposites: []
+  nid: 1794139124360
+  cid: 1794139124361
+  guid: 'nEb~YQAD(v'
+- term: kāmacchanda
+  reading: камаччха́нда
+  translation: чувственное желание
+  explanation: Влечение к приятным объектам чувств; первое препятствие.
+  parents:
+  - nīvaraṇa
+  children: []
+  see_also:
+  - kāma-taṇhā
+  - lobha
+  - kāmarāga
+  - chanda
+  - pañcorambhāgiyāni saṃyojanāni
+  opposites:
+  - nekkhamma
+  nid: 1794139124362
+  cid: 1794139124363
+  guid: 'KQ1uD;aO<_'
+- term: byāpāda
+  reading: бьяпа́да
+  translation: недоброжелательность
+  explanation: Злоба, раздражение, неприязнь; второе препятствие.
+  parents:
+  - nīvaraṇa
+  children: []
+  see_also:
+  - dosa
+  - paṭigha
+  - pañcorambhāgiyāni saṃyojanāni
+  opposites:
+  - mettā
+  nid: 1794139124364
+  cid: 1794139124365
+  guid: 'x?)%ELWzUY'
+- term: thīna-middha
+  reading: тхи́на-ми́ддха
+  translation: вялость и сонливость
+  explanation: Вялость, оцепенение ума (thīna) и сонливая тяжесть (middha); третье препятствие. Противодействие — усилие (viriya).
+  parents:
+  - nīvaraṇa
+  children: []
+  see_also: []
+  opposites:
+  - viriya
+  nid: 1794139124366
+  cid: 1794139124367
+  guid: 'F_89+O1]^e'
+- term: uddhacca-kukkucca
+  reading: уддха́чча-кукку́чча
+  translation: беспокойство и сожаление
+  explanation: Взбудораженность, разбросанность ума (uddhacca) и раскаяние о дурном поступке и о несделанном благом (kukkucca); четвёртое препятствие.
+  parents:
+  - nīvaraṇa
+  children: []
+  see_also:
+  - uddhacca
+  opposites:
+  - passaddhi
+  nid: 1794139124368
+  cid: 1794139124369
+  guid: 'y)8`QL>xw4'
+- term: saṃyojana
+  reading: самьо́джана
+  translation: десять оков
+  explanation: Узы, привязывающие к круговороту рождений (saṃsāra). Первые три отпадают при вхождении в поток (sotāpatti), четвёртая и пятая слабеют у sakadāgāmī (по комментариям) и отпадают у anāgāmī, последние пять — только у арха́та (arahant). В AN 10.13 четвёртая и пятая названы kāmacchanda и byāpāda.
+  parents:
+  - section: Загрязнения
+  children:
+  - sakkāya-diṭṭhi
+  - vicikicchā
+  - sīlabbata-parāmāsa
+  - kāmarāga
+  - paṭigha
+  - rūparāga
+  - arūparāga
+  - māna
+  - uddhacca
+  - avijjā
+  see_also:
+  - ariya-puggala
+  - saṃsāra
+  - magga-ñāṇa
+  - pañcorambhāgiyāni saṃyojanāni
+  - pañcuddhambhāgiyāni saṃyojanāni
+  - sattakkhattuparama
+  opposites: []
+  nid: 1794139124372
+  cid: 1794139124373
+  guid: 'PH=va;gK1k'
+- term: sakkāya-diṭṭhi
+  reading: сакка́я-ди́ттхи
+  translation: воззрение о личности
+  explanation: Убеждение, что совокупности (khandha) — это «я» или принадлежат «я». Первая из оков; исчезает у вошедшего в поток (sotāpanna).
+  parents:
+  - saṃyojana
+  children: []
+  see_also:
+  - anattā
+  - sotāpanna
+  - māna
+  - diṭṭhi-visuddhi
+  - diṭṭhi
+  - pañcorambhāgiyāni saṃyojanāni
+  opposites: []
+  nid: 1794139124374
+  cid: 1794139124375
+  guid: 'rUR3F*=MGQ'
+- term: vicikicchā
+  reading: вичики́ччха
+  translation: сомнение
+  explanation: Нерешительное сомнение в Бу́дде, Дха́мме, Са́нгхе и в тренировке (sikkhā), парализующее практику. Пятое препятствие и вторая из десяти оков (saṃyojana).
+  parents:
+  - nīvaraṇa
+  - saṃyojana
+  - kilesa
+  - anusaya
+  children: []
+  see_also:
+  - kaṅkhāvitaraṇa-visuddhi
+  - diṭṭhi
+  opposites:
+  - saddhā
+  nid: 1794139124370
+  cid: 1794139124371
+  guid: 'd]ieVEGi#y'
+- term: sīlabbata-parāmāsa
+  reading: сила́ббата-парама́са
+  translation: цепляние за обряды и правила
+  explanation: Убеждение, что правила (sīla), обеты (vata) или ритуалы сами по себе ведут к освобождению. Третья из оков.
+  parents:
+  - saṃyojana
+  children: []
+  see_also:
+  - sotāpanna
+  opposites: []
+  nid: 1794139124376
+  cid: 1794139124377
+  guid: 'gYdxw=|&=>'
+- term: kāmarāga
+  reading: камара́га
+  translation: чувственная страсть
+  explanation: Влечение к чувственным удовольствиям; четвёртая из оков (в AN 10.13 на этом месте — kāmacchanda); ослабевает у однажды возвращающегося (sakadāgāmī), исчезает у невозвращающегося (anāgāmī).
+  parents:
+  - saṃyojana
+  - anusaya
+  children: []
+  see_also:
+  - kāmacchanda
+  - kāma-taṇhā
+  - rāga
+  - sakadāgāmī
+  - anāgāmī
+  opposites: []
+  nid: 1794139124378
+  cid: 1794139124379
+  guid: 'sgss<o6X;/'
+- term: paṭigha
+  reading: па́тигха
+  translation: отторжение, раздражение
+  explanation: Отторжение, раздражение, злоба; пятая из оков (в AN 10.13 на этом месте — byāpāda); ослабевает у однажды возвращающегося (sakadāgāmī), исчезает у невозвращающегося (anāgāmī).
+  parents:
+  - saṃyojana
+  - anusaya
+  children: []
+  see_also:
+  - dosa
+  - sakadāgāmī
+  - anāgāmī
+  - byāpāda
+  opposites: []
+  nid: 1794139124380
+  cid: 1794139124381
+  guid: 'G1v<xh2F4N'
+- term: rūparāga
+  reading: рупара́га
+  translation: страсть к тонкоматериальному бытию
+  explanation: Привязанность к тонкоматериальным мирам (rūpa-loka) и состояниям (rūpajjhāna); шестая из оков.
+  parents:
+  - saṃyojana
+  children: []
+  see_also:
+  - rūpajjhāna
+  - pañcuddhambhāgiyāni saṃyojanāni
+  - bhavarāga
+  opposites: []
+  nid: 1794139124382
+  cid: 1794139124383
+  guid: 'y9#cK=RX}%'
+- term: arūparāga
+  reading: арупара́га
+  translation: страсть к нематериальному бытию
+  explanation: Привязанность к нематериальным мирам (arūpa-loka) и состояниям (arūpajjhāna); седьмая из оков.
+  parents:
+  - saṃyojana
+  children: []
+  see_also:
+  - rūpajjhāna
+  - pañcuddhambhāgiyāni saṃyojanāni
+  - bhavarāga
+  opposites: []
+  nid: 1794139124384
+  cid: 1794139124385
+  guid: 'zM@e*rp$v.'
+- term: māna
+  reading: ма́на
+  translation: самомнение
+  explanation: 'Сравнение себя с другими: «я лучше, хуже, равен»; восьмая из оков, исчезает лишь у арха́та (arahant).'
+  parents:
+  - saṃyojana
+  - kilesa
+  - anusaya
+  children: []
+  see_also:
+  - sakkāya-diṭṭhi
+  opposites: []
+  nid: 1794139124386
+  cid: 1794139124387
+  guid: 'FdR),}PxSZ'
+- term: uddhacca
+  reading: уддха́чча
+  translation: беспокойство
+  explanation: Тонкая взбудораженность ума; девятая из оков.
+  parents:
+  - saṃyojana
+  - kilesa
+  children: []
+  see_also:
+  - uddhacca-kukkucca
+  opposites: []
+  nid: 1794139124388
+  cid: 1794139124389
+  guid: 'bMX8<!Wt}%'
+- term: pañcorambhāgiyāni saṃyojanāni
+  reading: панчорамбхагия́ни самьоджана́ни
+  translation: пять низших оков
+  explanation: 'AN 10.13: sakkāyadiṭṭhi, vicikicchā, sīlabbataparāmāsa, kāmacchanda, byāpāda. Первые три исчерпаны у вошедшего в поток; когда оставлены все пять — это невозвращающийся (anāgāmī, AN 3.86).'
+  parents:
+  - section: Загрязнения
+  children: []
+  see_also:
+  - saṃyojana
+  - sakkāya-diṭṭhi
+  - kāmacchanda
+  - byāpāda
+  - anāgāmī
+  opposites:
+  - pañcuddhambhāgiyāni saṃyojanāni
+  nid: 1795473553136
+  cid: 1795473553137
+  guid: 'rd0RN5A!)S'
+- term: pañcuddhambhāgiyāni saṃyojanāni
+  reading: панчуддхамбхагия́ни самьоджана́ни
+  translation: пять высших оков
+  explanation: 'AN 10.13: rūparāga, arūparāga, māna, uddhacca, avijjā. Остаются у невозвращающегося (anāgāmī), оставившего лишь пять низших (AN 3.86); полностью оставляет их арха́т.'
+  parents:
+  - section: Загрязнения
+  children: []
+  see_also:
+  - saṃyojana
+  - rūparāga
+  - arūparāga
+  - avijjā
+  - arahant
+  opposites:
+  - pañcorambhāgiyāni saṃyojanāni
+  nid: 1795473553138
+  cid: 1795473553139
+  guid: 'LGbq6O>A}f'

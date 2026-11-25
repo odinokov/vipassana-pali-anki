@@ -1,0 +1,48 @@
+# Private working files (audit, agent output, session notes, local instructions)
+.agent-out/
+HANDOFF.md
+info.txt
+/CLAUDE.md
+/CLAUDE.local.md
+.claude/
+.beads/
+.obsidian/
+GRAPH_REPORT.md
+graphify-out/
+
+# Built packages and loose Anki databases (the release asset is uploaded, not committed;
+# deck/static/collection.anki2 is source and stays tracked)
+*.apkg
+/collection.anki2
+/collection.anki21
+*.anki21
+*.tmp
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Code-scanner state
+.slopconfig.yaml
+.slop*/
+
+# Editors and OS
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini

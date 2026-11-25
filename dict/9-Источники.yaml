@@ -1,0 +1,301 @@
+# Випассана::9 Источники: 19 cards. Source of the Anki deck; build.py reads this file (see deck/ for the rest of the package).
+#
+# One entry per note. Text keys (term, reading, translation, explanation) are plain text; build.py makes the HTML.
+# parents:   headword of a parent card, or {section: <title>} = the root of that tree section (a subdeck title);
+#            the order of the list is the order of the tree paths on the card.
+# children:  headwords, the order of "Включает". see_also: headwords, the order of "Связи".
+# opposites: headwords, or {term: ..., gloss: ...} for an opposite that has no card; the order of "Противоположность".
+# nid, cid, guid: the ids of the note and the card; keep them, Anki matches notes by them.
+# Tags are not stored: build.py derives them from the tree (subdeck, ancestors, headword).
+#
+# Order of the entries = study order of this subdeck: a card stands after its parents, a child after its parent
+# in the order of "Включает". build.py numbers `due` in this order (study_order), subdecks in the order 1..9.
+# build.py stops if two cards have the same headword, a reference is unknown, or a relation is one-sided
+# (parents <-> children, see_also <-> see_also, opposites <-> opposites).
+
+- term: Tipiṭaka
+  reading: Типи́така
+  translation: Три корзины, палийский канон
+  explanation: 'Канон тхерава́ды: дисциплина (Vinaya), наставления (Sutta) и систематизация учения (Abhidhamma). По традиции записан на Шри-Ланке в I веке до н. э.'
+  parents:
+  - section: Источники
+  children:
+  - Vinaya-piṭaka
+  - Sutta-piṭaka
+  - Abhidhamma-piṭaka
+  see_also:
+  - aṭṭhakathā
+  - sutta
+  - Pāḷi
+  - Theravāda
+  opposites: []
+  nid: 1794139124588
+  cid: 1794139124589
+  guid: 'GQa,//KX`q'
+- term: Vinaya-piṭaka
+  reading: Ви́ная-пи́така
+  translation: корзина дисциплины
+  explanation: Правила монашеской жизни и истории их появления.
+  parents:
+  - Tipiṭaka
+  children: []
+  see_also:
+  - sīla
+  - sikkhāpada
+  - bhikkhu
+  - bhikkhunī
+  opposites: []
+  nid: 1794139124590
+  cid: 1794139124591
+  guid: 'C4Tt8:zM?*'
+- term: Sutta-piṭaka
+  reading: Су́тта-пи́така
+  translation: корзина наставлений
+  explanation: 'Беседы Бу́дды и учеников в пяти собраниях (nikāya). В колоде ссылка — сокращение собрания и номер: DN, MN, SN, AN, а из малых текстов — Dhp и Snp.'
+  parents:
+  - Tipiṭaka
+  children:
+  - Dīgha-nikāya
+  - Majjhima-nikāya
+  - Saṃyutta-nikāya
+  - Aṅguttara-nikāya
+  - Khuddaka-nikāya
+  see_also:
+  - sutta
+  opposites: []
+  nid: 1794139124592
+  cid: 1794139124593
+  guid: 'kp0kWH,x@i'
+- term: Dīgha-nikāya
+  reading: Ди́гха-ника́я
+  translation: Собрание длинных наставлений, DN
+  explanation: 34 длинные су́тты; ссылка — номер су́тты. DN 16 — Mahāparinibbāna Sutta, DN 22 — Mahāsatipaṭṭhāna Sutta, DN 33 — Saṅgīti Sutta (учение по числам, от одного до десяти).
+  parents:
+  - Sutta-piṭaka
+  children:
+  - Mahāsatipaṭṭhāna Sutta
+  see_also: []
+  opposites: []
+  nid: 1794139124594
+  cid: 1794139124595
+  guid: 'z`=R3l-[&_'
+- term: Mahāsatipaṭṭhāna Sutta
+  reading: Махасатипаттха́на Су́тта
+  translation: Большая беседа об основах осознанности
+  explanation: DN 22 — то же наставление, что MN 10 (Satipaṭṭhāna Sutta), но раздел о четырёх истинах (Saccapabba) в нём подробно разобран. Основной текст о satipaṭṭhāna.
+  parents:
+  - Dīgha-nikāya
+  children: []
+  see_also:
+  - kāyānupassanā
+  - dhammānupassanā
+  - Majjhima-nikāya
+  - satipaṭṭhāna
+  - ekāyano maggo
+  opposites: []
+  nid: 1795473553082
+  cid: 1795473553083
+  guid: 'FY$~dz5(;M'
+- term: Majjhima-nikāya
+  reading: Ма́джхима-ника́я
+  translation: Собрание средних наставлений, MN
+  explanation: 152 су́тты средней длины; ссылка — номер су́тты. MN 10 — Satipaṭṭhāna Sutta, MN 26 — Ariyapariyesanā Sutta, MN 44 — Cūḷavedalla Sutta.
+  parents:
+  - Sutta-piṭaka
+  children: []
+  see_also:
+  - Mahāsatipaṭṭhāna Sutta
+  opposites: []
+  nid: 1794139124596
+  cid: 1794139124597
+  guid: 'E1>W)dy;U-'
+- term: Saṃyutta-nikāya
+  reading: Самью́тта-ника́я
+  translation: Собрание связанных наставлений, SN
+  explanation: 'Короткие су́тты, собранные по темам в 56 разделов (saṃyutta); ссылка — раздел и су́тта. SN 56.11 — 56-й раздел (о четырёх истинах), 11-я су́тта: первая проповедь.'
+  parents:
+  - Sutta-piṭaka
+  children:
+  - Dhammacakkappavattana Sutta
+  see_also: []
+  opposites: []
+  nid: 1794139124598
+  cid: 1794139124599
+  guid: 'D$Mn|>`Ipw'
+- term: Dhammacakkappavattana Sutta
+  reading: Дхаммачаккаппава́ттана Су́тта
+  translation: Запуск колеса Дха́ммы
+  explanation: 'Первая проповедь (SN 56.11) пятерым монахам в оленьем парке Isipatana близ Варанаси: срединный путь и четыре благородные истины. В конце Koṇḍañña получает «око Дха́ммы» (dhamma-cakkhu).'
+  parents:
+  - Saṃyutta-nikāya
+  children: []
+  see_also:
+  - sutta
+  - majjhimā paṭipadā
+  - cattāri ariyasaccāni
+  - dhamma-cakkhu
+  opposites: []
+  nid: 1795473553080
+  cid: 1795473553081
+  guid: 'orrjnzQJ=J'
+- term: Aṅguttara-nikāya
+  reading: Ангу́ттара-ника́я
+  translation: Собрание номерных наставлений, AN
+  explanation: Су́тты, сгруппированные по числу пунктов в 11 разделов (nipāta) — от «единиц» до «одиннадцати»; ссылка — раздел и су́тта. AN 4.14 — раздел «четвёрок», 14-я су́тта.
+  parents:
+  - Sutta-piṭaka
+  children:
+  - Kālāma Sutta
+  see_also: []
+  opposites: []
+  nid: 1794139124600
+  cid: 1794139124601
+  guid: 'B]iRq5n*9:'
+- term: Kālāma Sutta
+  reading: Кала́ма Су́тта
+  translation: Беседа с кала́мами
+  explanation: AN 3.65 (формально Kesamutti Sutta). Бу́дда советует жителям Kesamutta не полагаться на предание (anussava), преемственность (paramparā), авторитет текстов и логику, а самим увидеть, какие дха́ммы неблагие, и оставить их.
+  parents:
+  - Aṅguttara-nikāya
+  children: []
+  see_also:
+  - ehipassiko
+  - paramparā
+  - akusala
+  opposites: []
+  nid: 1795473553084
+  cid: 1795473553085
+  guid: 'D5DQCdQzL/'
+- term: Khuddaka-nikāya
+  reading: Кху́ддака-ника́я
+  translation: Собрание малых текстов
+  explanation: Разнородные тексты, в том числе Dhammapada, Sutta-nipāta, Theragāthā, Jātaka и Buddhavaṃsa.
+  parents:
+  - Sutta-piṭaka
+  children:
+  - Dhammapada
+  - Sutta-nipāta
+  - Jātaka
+  see_also: []
+  opposites: []
+  nid: 1794139124602
+  cid: 1794139124603
+  guid: 'DlXY,Mk4ap'
+- term: Dhammapada
+  reading: Дхаммапа́да
+  translation: Путь Дха́ммы, Dhp
+  explanation: 423 строфы в 26 главах; ссылка — номер строфы. Dhp 277–279 — строфы о трёх характеристиках (tilakkhaṇa).
+  parents:
+  - Khuddaka-nikāya
+  children: []
+  see_also:
+  - tilakkhaṇa
+  opposites: []
+  nid: 1794139124604
+  cid: 1794139124605
+  guid: 'Cb%g*SpE`r'
+- term: Sutta-nipāta
+  reading: Су́тта-нипа́та
+  translation: Сборник наставлений, Snp
+  explanation: Один из древнейших сборников, в основном в стихах; ссылка — глава и су́тта. Snp 1.8 — Karaṇīya Mettā Sutta.
+  parents:
+  - Khuddaka-nikāya
+  children: []
+  see_also:
+  - Sabbe sattā bhavantu sukhitattā
+  - sutta
+  opposites: []
+  nid: 1794139124606
+  cid: 1794139124607
+  guid: 'QS3HFdK72S'
+- term: Jātaka
+  reading: Джа́така
+  translation: Рассказы о прежних рождениях
+  explanation: Рассказы о прежних рождениях будущего Бу́дды (bodhisatta) — книга Khuddaka-nikāya. Слово jātaka названо среди девяти видов наставлений уже в MN 22.
+  parents:
+  - Khuddaka-nikāya
+  children: []
+  see_also:
+  - Buddha
+  - kamma
+  - dasa pāramiyo
+  opposites: []
+  nid: 1795473553086
+  cid: 1795473553087
+  guid: 'g[zlz!!}4]'
+- term: Abhidhamma-piṭaka
+  reading: Абхидха́мма-пи́така
+  translation: корзина высшего учения
+  explanation: Систематическое изложение учения в семи книгах; первая — Dhammasaṅgaṇī, перечень дха́мм, в том числе десяти загрязнений (kilesa).
+  parents:
+  - Tipiṭaka
+  children: []
+  see_also:
+  - paramattha-dhamma
+  - kilesa
+  opposites: []
+  nid: 1794139124608
+  cid: 1794139124609
+  guid: 'j%^N<=boc^'
+- term: aṭṭhakathā
+  reading: аттхака́тха
+  translation: комментарии
+  explanation: Толкования к канону; главные составил Buddhaghosa в V веке по древним сингальским комментариям, часть — Dhammapāla и другие авторы. Когда в карточке сказано «по комментариям», речь о них.
+  parents:
+  - section: Источники
+  children: []
+  see_also:
+  - Tipiṭaka
+  - Visuddhimagga
+  - Pāḷi
+  opposites: []
+  nid: 1794139124610
+  cid: 1794139124611
+  guid: 'o_[lb@uKDn'
+- term: Visuddhimagga
+  reading: Висуддхима́гга
+  translation: Путь очищения
+  explanation: 'Трактат Buddhaghosa (V век): свод учения тхерава́ды в 23 главах, построенный на трёх тренировках (sīla, samādhi, paññā) и семи очищениях (satta visuddhiyo). В колоде ссылка дана по главам: «Visuddhimagga, гл. 21».'
+  parents:
+  - section: Источники
+  children: []
+  see_also:
+  - satta visuddhiyo
+  - vipassanā-ñāṇa
+  - aṭṭhakathā
+  - Theravāda
+  opposites: []
+  nid: 1794139124612
+  cid: 1794139124613
+  guid: 'A$#}Tc/?6S'
+- term: sutta
+  reading: су́тта
+  translation: беседа, наставление
+  explanation: Отдельная беседа Бу́дды или его учеников — единица Sutta-piṭaka; ссылка идёт по номеру, например SN 56.11. Слово значит и «нить».
+  parents:
+  - section: Источники
+  children: []
+  see_also:
+  - Sutta-piṭaka
+  - Tipiṭaka
+  - Sutta-nipāta
+  - Dhammacakkappavattana Sutta
+  opposites: []
+  nid: 1795473553074
+  cid: 1795473553075
+  guid: 'p?#<bQh9Dd'
+- term: Pāḷi
+  reading: Па́ли
+  translation: язык канона, текст канона
+  explanation: Язык палийского канона (Tipiṭaka). В комментариях слово pāḷi значит «текст канона» — в отличие от комментария (aṭṭhakathā).
+  parents:
+  - section: Источники
+  children: []
+  see_also:
+  - Tipiṭaka
+  - Theravāda
+  - aṭṭhakathā
+  opposites: []
+  nid: 1795473553076
+  cid: 1795473553077
+  guid: 'phkpii$hy-'

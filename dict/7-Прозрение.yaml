@@ -1,0 +1,814 @@
+# Випассана::7 Прозрение: 51 cards. Source of the Anki deck; build.py reads this file (see deck/ for the rest of the package).
+#
+# One entry per note. Text keys (term, reading, translation, explanation) are plain text; build.py makes the HTML.
+# parents:   headword of a parent card, or {section: <title>} = the root of that tree section (a subdeck title);
+#            the order of the list is the order of the tree paths on the card.
+# children:  headwords, the order of "Включает". see_also: headwords, the order of "Связи".
+# opposites: headwords, or {term: ..., gloss: ...} for an opposite that has no card; the order of "Противоположность".
+# nid, cid, guid: the ids of the note and the card; keep them, Anki matches notes by them.
+# Tags are not stored: build.py derives them from the tree (subdeck, ancestors, headword).
+#
+# Order of the entries = study order of this subdeck: a card stands after its parents, a child after its parent
+# in the order of "Включает". build.py numbers `due` in this order (study_order), subdecks in the order 1..9.
+# build.py stops if two cards have the same headword, a reference is unknown, or a relation is one-sided
+# (parents <-> children, see_also <-> see_also, opposites <-> opposites).
+
+- term: vipassanā-ñāṇa
+  reading: випа́ссана-нья́на
+  translation: знания прозрения
+  explanation: Ступени, через которые проходит прозрение; у Маха́си Сая́до (его схема по Visuddhimagga) — 16 ступеней.
+  parents:
+  - section: Прозрение
+  children:
+  - nāmarūpa-pariccheda-ñāṇa
+  - paccaya-pariggaha-ñāṇa
+  - sammasana-ñāṇa
+  - udayabbaya-ñāṇa
+  - bhaṅga-ñāṇa
+  - bhaya-ñāṇa
+  - ādīnava-ñāṇa
+  - nibbidā-ñāṇa
+  - muñcitukamyatā-ñāṇa
+  - paṭisaṅkhā-ñāṇa
+  - saṅkhārupekkhā-ñāṇa
+  - anuloma-ñāṇa
+  - gotrabhū-ñāṇa
+  - magga-ñāṇa
+  - phala-ñāṇa
+  - paccavekkhaṇa-ñāṇa
+  see_also:
+  - vipassanā
+  - satta visuddhiyo
+  - Visuddhimagga
+  opposites: []
+  nid: 1794139124452
+  cid: 1794139124453
+  guid: 'EAcT<HAq7r'
+- term: gotrabhū-ñāṇa
+  reading: го́трабху-нья́на
+  translation: знание смены рода
+  explanation: '13-я ступень: переход из «рода» обычных людей (puthujjana) в род благородных (ariya); nibbāna впервые становится объектом.'
+  parents:
+  - vipassanā-ñāṇa
+  children: []
+  see_also:
+  - ariya-puggala
+  opposites: []
+  nid: 1794139124478
+  cid: 1794139124479
+  guid: 'm<fEsk-*x)'
+- term: phala-ñāṇa
+  reading: пха́ла-нья́на
+  translation: знание плода
+  explanation: '15-я ступень: плод пути, следующий сразу за ним; переживание nibbāna.'
+  parents:
+  - vipassanā-ñāṇa
+  children: []
+  see_also:
+  - nibbāna
+  - sotāpatti
+  - lokuttara
+  - aṭṭha purisapuggalā
+  opposites: []
+  nid: 1794139124482
+  cid: 1794139124483
+  guid: 'O_G]1z@]lC'
+- term: paccavekkhaṇa-ñāṇa
+  reading: паччаве́ккхана-нья́на
+  translation: знание обзора
+  explanation: '16-я ступень: обзор пути (magga), плода (phala), nibbāna, оставленных и оставшихся загрязнений (kilesa).'
+  parents:
+  - vipassanā-ñāṇa
+  children: []
+  see_also: []
+  opposites: []
+  nid: 1794139124484
+  cid: 1794139124485
+  guid: 'JqxoW<FfIH'
+- term: ariya-puggala
+  reading: а́рия-пу́ггала
+  translation: благородные личности
+  explanation: Четыре ступени пробуждения; вместе с моментами пути к каждой — «четыре пары, восемь личностей» (cattāri purisayugāni aṭṭha purisapuggalā).
+  parents:
+  - section: Прозрение
+  children:
+  - sotāpanna
+  - sakadāgāmī
+  - anāgāmī
+  - arahant
+  see_also:
+  - Saṅgha
+  - saṃyojana
+  - gotrabhū-ñāṇa
+  - cattāri purisayugāni
+  - aṭṭha purisapuggalā
+  opposites: []
+  nid: 1794139124486
+  cid: 1794139124487
+  guid: 'Np`w8<--0R'
+- term: sotāpanna
+  reading: сотапа́нна
+  translation: вошедший в поток
+  explanation: 'Отбросил первые три оковы: воззрение о личности (sakkāya-diṭṭhi), сомнение (vicikicchā), цепляние за обряды (sīlabbata-parāmāsa). Освободится не более чем через семь жизней (sattakkhattuparama); AN 3.87 различает три вида вошедших в поток.'
+  parents:
+  - ariya-puggala
+  children:
+  - sattakkhattuparama
+  - kolaṅkola
+  - ekabījī
+  see_also:
+  - sakkāya-diṭṭhi
+  - sīlabbata-parāmāsa
+  - sotāpatti
+  - dhamma-cakkhu
+  - cattāri sotāpannassa aṅgāni
+  - cattāri purisayugāni
+  opposites: []
+  nid: 1794139124488
+  cid: 1794139124489
+  guid: 'yeb]qRq.G8'
+- term: sattakkhattuparama
+  reading: саттаккхаттупа́рама
+  translation: не более семи рождений
+  explanation: 'Вошедший в поток (AN 3.86: «с истощением трёх оков»), которому осталось не более семи рождений среди богов и людей (AN 3.87: sattakkhattuparamo); затем он кладёт конец страданию.'
+  parents:
+  - sotāpanna
+  children: []
+  see_also:
+  - kolaṅkola
+  - ekabījī
+  - saṃyojana
+  opposites: []
+  nid: 1795473553142
+  cid: 1795473553143
+  guid: 'B?kVhuawj-'
+- term: kolaṅkola
+  reading: коланко́ла
+  translation: из семьи в семью
+  explanation: Вошедший в поток, которому осталось родиться в двух-трёх семьях (dve vā tīṇi vā kulāni), а затем — конец страдания (AN 3.87). Букв. «из семьи в семью» (kolaṃ + kola).
+  parents:
+  - sotāpanna
+  children: []
+  see_also:
+  - sattakkhattuparama
+  - ekabījī
+  - saṃsāra
+  opposites: []
+  nid: 1795473553144
+  cid: 1795473553145
+  guid: 'vml*Y!Lnwq'
+- term: ekabījī
+  reading: экаби́джи
+  translation: одно рождение («одно семя»)
+  explanation: Вошедший в поток, у которого остаётся одно человеческое рождение (ekaṃyeva mānusakaṃ bhavaṃ), затем — конец страдания (AN 3.87). Букв. «имеющий одно семя».
+  parents:
+  - sotāpanna
+  children: []
+  see_also:
+  - sattakkhattuparama
+  - kolaṅkola
+  - jāti
+  opposites: []
+  nid: 1795473553146
+  cid: 1795473553147
+  guid: 'CmkqGbn=zo'
+- term: sakadāgāmī
+  reading: сакадага́ми
+  translation: однажды возвращающийся
+  explanation: Отбросил первые три оковы и ослабил страсть, ненависть и заблуждение (rāga, dosa, moha; AN 3.87); по комментариям — kāmarāga и paṭigha; вернётся в этот мир лишь раз.
+  parents:
+  - ariya-puggala
+  children: []
+  see_also:
+  - kāmarāga
+  - paṭigha
+  opposites: []
+  nid: 1794139124490
+  cid: 1794139124491
+  guid: 'tEF21PM209'
+- term: anāgāmī
+  reading: анага́ми
+  translation: невозвращающийся
+  explanation: Полностью отбросил чувственную страсть (kāmarāga) и отторжение (paṭigha); не возвращается в мир чувственных желаний (kāma-loka).
+  parents:
+  - ariya-puggala
+  children: []
+  see_also:
+  - kāmarāga
+  - paṭigha
+  - pañcorambhāgiyāni saṃyojanāni
+  opposites: []
+  nid: 1794139124492
+  cid: 1794139124493
+  guid: 'KE>=HA*_K:'
+- term: arahant
+  reading: а́рахант
+  translation: достойный, арха́т
+  explanation: Отбросил все десять оков (saṃyojana); полностью освобождён.
+  parents:
+  - ariya-puggala
+  children: []
+  see_also:
+  - Buddha
+  - nibbāna
+  - āsava
+  - saupādisesā nibbānadhātu
+  - anupādisesā nibbānadhātu
+  - pañcuddhambhāgiyāni saṃyojanāni
+  - cattāri purisayugāni
+  opposites: []
+  nid: 1794139124494
+  cid: 1794139124495
+  guid: 'i0gv5%e4Pd'
+- term: satta visuddhiyo
+  reading: са́тта вису́ддхийо
+  translation: семь очищений
+  explanation: Ступени пути от нравственности до пробуждения; в MN 24 их сравнивают с семью сменными колесницами. На них построена Visuddhimagga; она же распределяет по ним знания прозрения (vipassanā-ñāṇa).
+  parents:
+  - section: Прозрение
+  children:
+  - sīla-visuddhi
+  - citta-visuddhi
+  - diṭṭhi-visuddhi
+  - kaṅkhāvitaraṇa-visuddhi
+  - maggāmagga-ñāṇadassana-visuddhi
+  - paṭipadā-ñāṇadassana-visuddhi
+  - ñāṇadassana-visuddhi
+  see_also:
+  - vipassanā-ñāṇa
+  - Visuddhimagga
+  opposites: []
+  nid: 1794139124498
+  cid: 1794139124499
+  guid: 'exiy4|}7o;'
+- term: sīla-visuddhi
+  reading: си́ла-вису́ддхи
+  translation: очищение нравственности
+  explanation: '1-е очищение: чистая нравственность (sīla) — опора для всего дальнейшего.'
+  parents:
+  - satta visuddhiyo
+  children: []
+  see_also:
+  - sīla
+  - pañcasīla
+  opposites: []
+  nid: 1794139124500
+  cid: 1794139124501
+  guid: 'rP-*AE<WZg'
+- term: citta-visuddhi
+  reading: чи́тта-вису́ддхи
+  translation: очищение ума
+  explanation: '2-е очищение: ум, свободный от препятствий (nīvaraṇa) благодаря сосредоточению (samādhi). По Visuddhimagga это upacāra samādhi и appanā samādhi; khaṇika samādhi сюда относит традиция Маха́си.'
+  parents:
+  - satta visuddhiyo
+  children:
+  - khaṇika samādhi
+  - upacāra samādhi
+  - appanā samādhi
+  see_also:
+  - samādhi
+  - nīvaraṇa
+  opposites: []
+  nid: 1794139124502
+  cid: 1794139124503
+  guid: 'oT{=^g~Y<l'
+- term: khaṇika samādhi
+  reading: кха́ника сама́дхи
+  translation: мгновенное сосредоточение
+  explanation: 'Термин комментариев: ум собран от момента к моменту, следуя за меняющимися объектами. Считается достаточным для прозрения без jhāna — путь «сухого прозрения» (sukkha-vipassaka); на это опирается традиция Маха́си.'
+  parents:
+  - citta-visuddhi
+  children: []
+  see_also:
+  - vipassanā
+  - samādhi
+  opposites: []
+  nid: 1794139124338
+  cid: 1794139124339
+  guid: 'b/(s-cOB*'
+- term: upacāra samādhi
+  reading: упача́ра сама́дхи
+  translation: сосредоточение доступа
+  explanation: 'Термин комментариев: помехи (nīvaraṇa) подавлены, ум близок к поглощению; надёжная основа для випа́ссаны.'
+  parents:
+  - citta-visuddhi
+  children: []
+  see_also:
+  - samādhi
+  - nīvaraṇa
+  opposites: []
+  nid: 1794139124340
+  cid: 1794139124341
+  guid: 'oPGv*.j*>'
+- term: appanā samādhi
+  reading: а́ппана сама́дхи
+  translation: сосредоточение поглощения
+  explanation: 'Термин комментариев: уровень jhāna, ум полностью слит с объектом.'
+  parents:
+  - citta-visuddhi
+  children: []
+  see_also:
+  - jhāna
+  - samatha
+  - rūpajjhāna
+  opposites: []
+  nid: 1794139124342
+  cid: 1794139124343
+  guid: 'HZ95hS{7hT'
+- term: diṭṭhi-visuddhi
+  reading: ди́ттхи-вису́ддхи
+  translation: очищение воззрения
+  explanation: '3-е очищение: ум и материя (nāmarūpa) видятся как процессы без «я» (anattā).'
+  parents:
+  - satta visuddhiyo
+  children:
+  - nāmarūpa-pariccheda-ñāṇa
+  see_also:
+  - sakkāya-diṭṭhi
+  opposites: []
+  nid: 1794139124504
+  cid: 1794139124505
+  guid: 'm|/W2U_B5c'
+- term: nāmarūpa-pariccheda-ñāṇa
+  reading: намару́па-париччхе́да-нья́на
+  translation: знание различения ума и материи
+  explanation: '1-я ступень: ум и материя (nāmarūpa) видятся как отдельные процессы, а не как единое «я».'
+  parents:
+  - vipassanā-ñāṇa
+  - diṭṭhi-visuddhi
+  children: []
+  see_also:
+  - nāmarūpa
+  opposites: []
+  nid: 1794139124454
+  cid: 1794139124455
+  guid: 'eY8M>.u;iZ'
+- term: kaṅkhāvitaraṇa-visuddhi
+  reading: канкхавита́рана-вису́ддхи
+  translation: очищение преодолением сомнений
+  explanation: '4-е очищение: понимание причин и условий снимает сомнения (vicikicchā) о прошлом, настоящем и будущем.'
+  parents:
+  - satta visuddhiyo
+  children:
+  - paccaya-pariggaha-ñāṇa
+  see_also:
+  - vicikicchā
+  - paṭicca-samuppāda
+  opposites: []
+  nid: 1794139124506
+  cid: 1794139124507
+  guid: 'F[7J`48)T%'
+- term: paccaya-pariggaha-ñāṇa
+  reading: па́ччая-пари́ггаха-нья́на
+  translation: знание обусловленности
+  explanation: '2-я ступень: видны причины и условия, из которых возникают ум и материя, — в прошлом, настоящем и будущем (paccaya — «условие»).'
+  parents:
+  - vipassanā-ñāṇa
+  - kaṅkhāvitaraṇa-visuddhi
+  children: []
+  see_also:
+  - paṭicca-samuppāda
+  opposites: []
+  nid: 1794139124456
+  cid: 1794139124457
+  guid: 'j+u34LLyU?'
+- term: maggāmagga-ñāṇadassana-visuddhi
+  reading: маггама́гга-ньянада́ссана-вису́ддхи
+  translation: очищение знанием пути и не-пути
+  explanation: '5-е очищение: умение отличать путь от ловушек — несовершенств прозрения (vipassanupakkilesa) ранней стадии udayabbaya-ñāṇa.'
+  parents:
+  - satta visuddhiyo
+  children:
+  - sammasana-ñāṇa
+  - udayabbaya-ñāṇa
+  - vipassanupakkilesa
+  see_also: []
+  opposites: []
+  nid: 1794139124508
+  cid: 1794139124509
+  guid: 'bMLAXcQ,z-'
+- term: sammasana-ñāṇa
+  reading: самма́сана-нья́на
+  translation: знание осмысления
+  explanation: '3-я ступень: явления осмысляются через три характеристики (tilakkhaṇa). По Visuddhimagga открывает 5-е очищение; у Маха́си стоит под 4-м.'
+  parents:
+  - vipassanā-ñāṇa
+  - maggāmagga-ñāṇadassana-visuddhi
+  children: []
+  see_also:
+  - tilakkhaṇa
+  opposites: []
+  nid: 1794139124458
+  cid: 1794139124459
+  guid: 'j?|ugvE?<{'
+- term: vipassanupakkilesa
+  reading: випассанупаккиле́са
+  translation: несовершенства прозрения
+  explanation: 'Десять ловушек ранней стадии udayabbaya-ñāṇa (по Paṭisambhidāmagga и Visuddhimagga): свет (obhāsa), знание (ñāṇa), восторг (pīti), умиротворённость (passaddhi), блаженство (sukha), убеждённость (adhimokkha), усилие (paggaha), осознанность (upaṭṭhāna), невозмутимость (upekkhā) и тонкое влечение к ним (nikanti). Сами по себе они не плохи — загрязняет цепляние за них.'
+  parents:
+  - maggāmagga-ñāṇadassana-visuddhi
+  children: []
+  see_also:
+  - udayabbaya-ñāṇa
+  opposites: []
+  nid: 1794139124514
+  cid: 1794139124515
+  guid: 'Ke/F,xW(|t'
+- term: paṭipadā-ñāṇadassana-visuddhi
+  reading: пати́пада-ньянада́ссана-вису́ддхи
+  translation: очищение знанием хода практики
+  explanation: '6-е очищение: девять знаний — от зрелого udayabbaya-ñāṇa до anuloma-ñāṇa.'
+  parents:
+  - satta visuddhiyo
+  children:
+  - udayabbaya-ñāṇa
+  - bhaṅga-ñāṇa
+  - bhaya-ñāṇa
+  - ādīnava-ñāṇa
+  - nibbidā-ñāṇa
+  - muñcitukamyatā-ñāṇa
+  - paṭisaṅkhā-ñāṇa
+  - saṅkhārupekkhā-ñāṇa
+  - anuloma-ñāṇa
+  see_also: []
+  opposites: []
+  nid: 1794139124510
+  cid: 1794139124511
+  guid: 'Ai<@Qa2@w#'
+- term: udayabbaya-ñāṇa
+  reading: удая́ббая-нья́на
+  translation: знание возникновения и исчезновения
+  explanation: '4-я ступень: ясно видно возникновение и исчезновение. В ранней фазе (по Visuddhimagga — 5-е очищение) бывают свет (obhāsa), восторг (pīti), умиротворённость (passaddhi) — «несовершенства прозрения» (vipassanupakkilesa), за которые нельзя цепляться; зрелая фаза относится к 6-му очищению.'
+  parents:
+  - vipassanā-ñāṇa
+  - maggāmagga-ñāṇadassana-visuddhi
+  - paṭipadā-ñāṇadassana-visuddhi
+  children: []
+  see_also:
+  - udayabbaya
+  - vipassanupakkilesa
+  opposites: []
+  nid: 1794139124460
+  cid: 1794139124461
+  guid: 'Q|k`[rC(3='
+- term: bhaṅga-ñāṇa
+  reading: бха́нга-нья́на
+  translation: знание растворения
+  explanation: '5-я ступень: заметно лишь исчезновение явлений; у Гое́нки — плотность тела растворяется.'
+  parents:
+  - vipassanā-ñāṇa
+  - paṭipadā-ñāṇadassana-visuddhi
+  children: []
+  see_also:
+  - bhaṅga
+  opposites: []
+  nid: 1794139124462
+  cid: 1794139124463
+  guid: 'jbr%2DQIpE'
+- term: bhaya-ñāṇa
+  reading: бха́я-нья́на
+  translation: знание ужаса
+  explanation: '6-я ступень: всё исчезающее видится пугающим и ненадёжным.'
+  parents:
+  - vipassanā-ñāṇa
+  - paṭipadā-ñāṇadassana-visuddhi
+  children: []
+  see_also: []
+  opposites: []
+  nid: 1794139124464
+  cid: 1794139124465
+  guid: 'raJtS]sD-.'
+- term: ādīnava-ñāṇa
+  reading: ади́нава-нья́на
+  translation: знание опасности
+  explanation: '7-я ступень: в обусловленных явлениях (saṅkhārā) виден изъян и опасность.'
+  parents:
+  - vipassanā-ñāṇa
+  - paṭipadā-ñāṇadassana-visuddhi
+  children: []
+  see_also:
+  - dukkha
+  opposites: []
+  nid: 1794139124466
+  cid: 1794139124467
+  guid: 'q<fq9Vo#iK'
+- term: nibbidā-ñāṇa
+  reading: ни́ббида-нья́на
+  translation: знание разочарования
+  explanation: '8-я ступень: пресыщение и отрезвление по отношению ко всему обусловленному (saṅkhārā).'
+  parents:
+  - vipassanā-ñāṇa
+  - paṭipadā-ñāṇadassana-visuddhi
+  children: []
+  see_also: []
+  opposites: []
+  nid: 1794139124468
+  cid: 1794139124469
+  guid: 'EHY9dZicXr'
+- term: muñcitukamyatā-ñāṇa
+  reading: мунчитука́мьята-нья́на
+  translation: знание желания освободиться
+  explanation: '9-я ступень: сильное стремление вырваться из круговорота формирований (saṅkhārā).'
+  parents:
+  - vipassanā-ñāṇa
+  - paṭipadā-ñāṇadassana-visuddhi
+  children: []
+  see_also: []
+  opposites: []
+  nid: 1794139124470
+  cid: 1794139124471
+  guid: 'GGLbh^to_u'
+- term: paṭisaṅkhā-ñāṇa
+  reading: патиса́нкха-нья́на
+  translation: знание повторного рассмотрения
+  explanation: '10-я ступень: явления снова исследуются через три характеристики (tilakkhaṇa); часто бывает тяжёлой.'
+  parents:
+  - vipassanā-ñāṇa
+  - paṭipadā-ñāṇadassana-visuddhi
+  children: []
+  see_also: []
+  opposites: []
+  nid: 1794139124472
+  cid: 1794139124473
+  guid: 'f+*ncQ(w5a'
+- term: saṅkhārupekkhā-ñāṇa
+  reading: санкхарупе́ккха-нья́на
+  translation: знание невозмутимости в отношении формирований
+  explanation: '11-я ступень: ровное, лёгкое наблюдение без влечения (rāga) и отвращения (dosa).'
+  parents:
+  - vipassanā-ñāṇa
+  - paṭipadā-ñāṇadassana-visuddhi
+  children: []
+  see_also:
+  - upekkhā
+  opposites: []
+  nid: 1794139124474
+  cid: 1794139124475
+  guid: 'g2kKzzd.4Z'
+- term: anuloma-ñāṇa
+  reading: ануло́ма-нья́на
+  translation: знание соответствия
+  explanation: '12-я ступень: прозрение, согласное с предыдущими знаниями и с истинами (sacca); за ним следуют gotrabhū и путь (magga).'
+  parents:
+  - vipassanā-ñāṇa
+  - paṭipadā-ñāṇadassana-visuddhi
+  children: []
+  see_also: []
+  opposites: []
+  nid: 1794139124476
+  cid: 1794139124477
+  guid: 'D5,2HFWLia'
+- term: ñāṇadassana-visuddhi
+  reading: ньянада́ссана-вису́ддхи
+  translation: очищение знанием и видением
+  explanation: '7-е очищение: знание надмирского пути (magga-ñāṇa). Знание смены рода (gotrabhū-ñāṇa) стоит на пороге, а плод (phala-ñāṇa) и обзор следуют за ним.'
+  parents:
+  - satta visuddhiyo
+  children:
+  - magga-ñāṇa
+  see_also:
+  - lokuttara
+  - nibbāna
+  opposites: []
+  nid: 1794139124512
+  cid: 1794139124513
+  guid: 'rSzI[[,X[r'
+- term: magga-ñāṇa
+  reading: ма́гга-нья́на
+  translation: знание пути
+  explanation: '14-я ступень: момент, когда оковы (saṃyojana) отсекаются.'
+  parents:
+  - vipassanā-ñāṇa
+  - ñāṇadassana-visuddhi
+  children: []
+  see_also:
+  - saṃyojana
+  - nibbāna
+  - sotāpatti
+  - lokuttara
+  - paṭivedha
+  - aṭṭha purisapuggalā
+  opposites: []
+  nid: 1794139124480
+  cid: 1794139124481
+  guid: 'we=1sBzvhv'
+- term: sotāpatti
+  reading: сотапа́тти
+  translation: вхождение в поток
+  explanation: 'Первая ступень пробуждения: мгновение пути (magga) и плода (phala), когда отпадают первые три оковы (saṃyojana) и переживается нибба́на (nibbāna). «Поток» — благородный восьмеричный путь (SN 55.5). Признаки вошедшего: непоколебимое доверие (aveccappasāda) к Бу́дде, Дха́мме и Са́нгхе и безупречная нравственность (ariyakantāni sīlāni).'
+  parents:
+  - section: Прозрение
+  children:
+  - sotāpattiyaṅga
+  - cattāri sotāpannassa aṅgāni
+  see_also:
+  - sotāpanna
+  - dhamma-cakkhu
+  - magga-ñāṇa
+  - phala-ñāṇa
+  - lokuttara
+  - ariyo aṭṭhaṅgiko maggo
+  opposites: []
+  nid: 1794139124516
+  cid: 1794139124517
+  guid: 'rRi7.Sq0Hx'
+- term: sotāpattiyaṅga
+  reading: сотапаттия́нга
+  translation: четыре фактора вхождения в поток
+  explanation: 'Условия, ведущие к вхождению в поток (SN 55.5): общение с благими людьми (sappurisa-saṃseva), слушание истинной Дха́ммы (saddhammassavana), мудрое внимание (yoniso manasikāra) и практика в согласии с Дха́ммой (dhammānudhammappaṭipatti). В других су́ттах SN 55 тем же словом названы четыре качества вошедшего в поток (в DN 33 — cattāri sotāpannassa aṅgāni).'
+  parents:
+  - sotāpatti
+  children:
+  - sappurisa-saṃseva
+  - saddhammassavana
+  - yoniso manasikāra
+  - dhammānudhammappaṭipatti
+  see_also:
+  - cattāri sotāpannassa aṅgāni
+  opposites: []
+  nid: 1794139124518
+  cid: 1794139124519
+  guid: 'xCo5xZ]noR'
+- term: sappurisa-saṃseva
+  reading: саппу́риса-самсе́ва
+  translation: общение с благими людьми
+  explanation: 'Первый фактор вхождения в поток: близость к тем, кто знает и практикует Дха́мму, — к благому другу (kalyāṇamitta).'
+  parents:
+  - sotāpattiyaṅga
+  children: []
+  see_also:
+  - kalyāṇamitta
+  opposites: []
+  nid: 1794139124520
+  cid: 1794139124521
+  guid: 'M^=gN2wx~?'
+- term: saddhammassavana
+  reading: саддхаммасса́вана
+  translation: слушание истинной Дха́ммы
+  explanation: 'Второй фактор: слушать учение — на курсе это вечерние беседы; основа мудрости услышанного (sutamayā paññā).'
+  parents:
+  - sotāpattiyaṅga
+  children: []
+  see_also:
+  - sutamayā paññā
+  - pariyatti
+  opposites: []
+  nid: 1794139124522
+  cid: 1794139124523
+  guid: 'B1|Qrmo6Hb'
+- term: dhammānudhammappaṭipatti
+  reading: дхамманудхаммаппатипа́тти
+  translation: практика в согласии с Дха́ммой
+  explanation: 'Четвёртый фактор: жить и практиковать так, как учит Дха́мма, — от нравственности (sīla) до прозрения (vipassanā).'
+  parents:
+  - sotāpattiyaṅga
+  children: []
+  see_also:
+  - paṭipatti
+  opposites: []
+  nid: 1794139124524
+  cid: 1794139124525
+  guid: 'M6/;y/+D~5'
+- term: cattāri sotāpannassa aṅgāni
+  reading: чатта́ри сотапанна́сса анга́ни
+  translation: четыре качества вошедшего в поток
+  explanation: 'DN 33: непоколебимое доверие (aveccappasāda) к Бу́дде, Дха́мме и Са́нгхе и нравственность, дорогая благородным (ariyakantāni sīlāni). Там они отличаются от четырёх условий вхождения в поток (sotāpattiyaṅga); в других су́ттах эти качества сами названы тем же словом.'
+  parents:
+  - sotāpatti
+  children: []
+  see_also:
+  - sotāpanna
+  - sotāpattiyaṅga
+  - tiratana
+  - sīla
+  opposites: []
+  nid: 1795473553148
+  cid: 1795473553149
+  guid: 'vGIo,?FJH~'
+- term: dhamma-cakkhu
+  reading: дха́мма-ча́ккху
+  translation: око Дха́ммы
+  explanation: 'Прозрение, с которым входят в поток: всё, чему свойственно возникать, свойственно и прекращаться (yaṃ kiñci samudayadhammaṃ, sabbaṃ taṃ nirodhadhammaṃ). Так в SN 56.11 описано пробуждение Конда́ньи (Koṇḍañña) — первого вошедшего в поток.'
+  parents:
+  - section: Прозрение
+  children: []
+  see_also:
+  - anicca
+  - sotāpanna
+  - sotāpatti
+  - Dhammacakkappavattana Sutta
+  opposites: []
+  nid: 1794139124526
+  cid: 1794139124527
+  guid: 'dwb9LA4o(,'
+- term: vimokkha-mukha
+  reading: вимо́ккха-му́кха
+  translation: три двери освобождения
+  explanation: Созерцание непостоянства (anicca) ведёт к беспризнаковому освобождению, неудовлетворительности (dukkha) — к ненаправленному, безличности (anattā) — к пустотному (Visuddhimagga, гл. 21).
+  parents:
+  - section: Прозрение
+  children:
+  - suññatā
+  - animitta
+  - appaṇihita
+  see_also:
+  - tilakkhaṇa
+  - nibbāna
+  opposites: []
+  nid: 1794139124528
+  cid: 1794139124529
+  guid: 'p6T[Fy_&7)'
+- term: suññatā
+  reading: су́ннята
+  translation: пустотность
+  explanation: Явления пусты от «я» и принадлежащего «я». Дверь освобождения через созерцание безличности (anattā).
+  parents:
+  - vimokkha-mukha
+  children: []
+  see_also:
+  - anattā
+  opposites: []
+  nid: 1794139124530
+  cid: 1794139124531
+  guid: 'J5LFtGHm%p'
+- term: animitta
+  reading: аними́тта
+  translation: беспризнаковое
+  explanation: 'Освобождение без «знака» (nimitta) постоянства: дверь через созерцание непостоянства (anicca).'
+  parents:
+  - vimokkha-mukha
+  children: []
+  see_also:
+  - anicca
+  - nimitta
+  opposites: []
+  nid: 1794139124532
+  cid: 1794139124533
+  guid: 'gK-%y|:1cH'
+- term: appaṇihita
+  reading: аппани́хита
+  translation: ненаправленное
+  explanation: 'Освобождение без стремления к чему-либо обусловленному: дверь через созерцание неудовлетворительности (dukkha).'
+  parents:
+  - vimokkha-mukha
+  children: []
+  see_also:
+  - dukkha
+  opposites: []
+  nid: 1794139124534
+  cid: 1794139124535
+  guid: 'kx:y-y*gzh'
+- term: lokuttara
+  reading: локу́ттара
+  translation: надмирское
+  explanation: 'Выходящее за пределы обусловленного мира. По Абхидха́мме это девять надмирских дха́мм: четыре пути (magga), четыре плода (phala) и нибба́на. Всё до пути, включая знания прозрения, — мирское.'
+  parents:
+  - section: Прозрение
+  children: []
+  see_also:
+  - nibbāna
+  - magga-ñāṇa
+  - phala-ñāṇa
+  - asaṅkhata
+  - ñāṇadassana-visuddhi
+  - sotāpatti
+  opposites:
+  - term: lokiya
+    gloss: мирское
+  nid: 1794139124536
+  cid: 1794139124537
+  guid: 'ur_}bXC}x?'
+- term: cattāri purisayugāni
+  reading: чатта́ри пурисаюга́ни
+  translation: четыре пары
+  explanation: 'Четыре пары благородных учеников: на каждой из четырёх ступеней — идущий к плоду (paṭipanno) и достигший его; из формулы Са́нгхи (DN 33). Вместе — «восемь личностей» (aṭṭha purisapuggalā).'
+  parents:
+  - section: Прозрение
+  children: []
+  see_also:
+  - ariya-puggala
+  - aṭṭha purisapuggalā
+  - Saṅgha
+  - sotāpanna
+  - arahant
+  opposites: []
+  nid: 1795473553150
+  cid: 1795473553151
+  guid: 'cIjt[dU_T#'
+- term: aṭṭha purisapuggalā
+  reading: а́ттха пурисапу́ггала
+  translation: восемь личностей
+  explanation: 'Восемь благородных личностей: четверо идущих к плоду (на пути, magga) и четверо достигших плода (phala) — те же четыре пары (cattāri purisayugāni). Так в DN 33 описана благородная Са́нгха.'
+  parents:
+  - section: Прозрение
+  children: []
+  see_also:
+  - cattāri purisayugāni
+  - ariya-puggala
+  - Saṅgha
+  - magga-ñāṇa
+  - phala-ñāṇa
+  opposites: []
+  nid: 1795473553152
+  cid: 1795473553153
+  guid: 'ItSY#AZ(BA'

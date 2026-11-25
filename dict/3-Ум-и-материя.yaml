@@ -1,0 +1,298 @@
+# Випассана::3 Ум и материя: 17 cards. Source of the Anki deck; build.py reads this file (see deck/ for the rest of the package).
+#
+# One entry per note. Text keys (term, reading, translation, explanation) are plain text; build.py makes the HTML.
+# parents:   headword of a parent card, or {section: <title>} = the root of that tree section (a subdeck title);
+#            the order of the list is the order of the tree paths on the card.
+# children:  headwords, the order of "Включает". see_also: headwords, the order of "Связи".
+# opposites: headwords, or {term: ..., gloss: ...} for an opposite that has no card; the order of "Противоположность".
+# nid, cid, guid: the ids of the note and the card; keep them, Anki matches notes by them.
+# Tags are not stored: build.py derives them from the tree (subdeck, ancestors, headword).
+#
+# Order of the entries = study order of this subdeck: a card stands after its parents, a child after its parent
+# in the order of "Включает". build.py numbers `due` in this order (study_order), subdecks in the order 1..9.
+# build.py stops if two cards have the same headword, a reference is unknown, or a relation is one-sided
+# (parents <-> children, see_also <-> see_also, opposites <-> opposites).
+
+- term: pañcakkhandha
+  reading: панчаккха́ндха
+  translation: пять совокупностей
+  explanation: 'Всё, что принимают за «я»: материя (rūpa), ощущение (vedanā), восприятие (saññā), формирования (saṅkhāra), сознание (viññāṇa). Цепляние (upādāna) к ним — страдание; SN 22.48 различает совокупности и совокупности цепляния (upādānakkhandha).'
+  parents:
+  - section: Ум и материя
+  children:
+  - rūpa
+  - vedanā
+  - saññā
+  - saṅkhāra
+  - viññāṇa
+  see_also:
+  - anattā
+  - nāmarūpa
+  - upādāna
+  - dukkha-sacca
+  - paññatti
+  - dhammānupassanā
+  - upādāyarūpa
+  - pañcupādānakkhandha
+  opposites: []
+  nid: 1794139124238
+  cid: 1794139124239
+  guid: 'w=/$@3>Awc'
+- term: rūpa
+  reading: ру́па
+  translation: материя, форма
+  explanation: Материальная сторона опыта — тело и его элементы (mahābhūta); первая совокупность. Также — видимое, объект зрения.
+  parents:
+  - pañcakkhandha
+  - nāmarūpa
+  - paramattha-dhamma
+  children:
+  - mahābhūta
+  - upādāyarūpa
+  - kalāpa
+  see_also:
+  - cakkhu
+  - cha bāhirāni āyatanāni
+  opposites: []
+  nid: 1794139124240
+  cid: 1794139124241
+  guid: 'pKO0b<j#P#'
+- term: mahābhūta
+  reading: махабху́та
+  translation: четыре великих элемента
+  explanation: Основные свойства материи (rūpa); по Абхидха́мме — твёрдость (paṭhavī), сцепление (āpo), температура (tejo), движение (vāyo). У Гое́нки они наблюдаются как разнообразные ощущения в теле.
+  parents:
+  - rūpa
+  children:
+  - paṭhavī-dhātu
+  - āpo-dhātu
+  - tejo-dhātu
+  - vāyo-dhātu
+  see_also:
+  - kalāpa
+  - upādāyarūpa
+  - dhātumanasikāra
+  opposites: []
+  nid: 1794139124272
+  cid: 1794139124273
+  guid: 'zk`Vl/N#Xm'
+- term: paṭhavī-dhātu
+  reading: па́тхави-дха́ту
+  translation: элемент земли
+  explanation: Твёрдость и тяжесть; в ощущениях — плотность, вес, шероховатость, мягкость.
+  parents:
+  - mahābhūta
+  children: []
+  see_also:
+  - dhātumanasikāra
+  opposites: []
+  nid: 1794139124274
+  cid: 1794139124275
+  guid: 'Nba<Iy?;dG'
+- term: āpo-dhātu
+  reading: а́по-дха́ту
+  translation: элемент воды
+  explanation: Сцепление и текучесть. По Абхидха́мме не ощущается касанием напрямую, а познаётся умом.
+  parents:
+  - mahābhūta
+  children: []
+  see_also: []
+  opposites: []
+  nid: 1794139124276
+  cid: 1794139124277
+  guid: 'x`+A$F}C>_'
+- term: tejo-dhātu
+  reading: те́джо-дха́ту
+  translation: элемент огня
+  explanation: Температура; в ощущениях — жар, тепло, прохлада, холод.
+  parents:
+  - mahābhūta
+  children: []
+  see_also: []
+  opposites: []
+  nid: 1794139124278
+  cid: 1794139124279
+  guid: 'y*YXx/DxL|'
+- term: vāyo-dhātu
+  reading: ва́йо-дха́ту
+  translation: элемент ветра
+  explanation: Движение и опора; в ощущениях — давление, пульсация, вибрация, напряжение.
+  parents:
+  - mahābhūta
+  children: []
+  see_also: []
+  opposites: []
+  nid: 1794139124280
+  cid: 1794139124281
+  guid: 'M-my14>Bu|'
+- term: upādāyarūpa
+  reading: упадаяру́па
+  translation: производная материя
+  explanation: 'Материя, зависящая от четырёх великих элементов (mahābhūta): rūpa — это «cattāro ca mahābhūtā, catunnañca mahābhūtānaṃ upādāyarūpaṃ» (SN 12.2). В Абхидха́мме — 24 вида из 28 видов материи.'
+  parents:
+  - rūpa
+  children: []
+  see_also:
+  - mahābhūta
+  - pañcakkhandha
+  - nāmarūpa
+  opposites: []
+  nid: 1795473553088
+  cid: 1795473553089
+  guid: 'I0Y{b!W[Yf'
+- term: kalāpa
+  reading: кала́па
+  translation: мельчайшая частица материи (букв. «группа»)
+  explanation: 'Термин комментариев и Абхидха́ммы: неделимая группа материальных свойств (rūpa-kalāpa), мгновенно возникающая и исчезающая. У Гое́нки — то, что открывается при растворении (bhaṅga).'
+  parents:
+  - rūpa
+  children: []
+  see_also:
+  - bhaṅga
+  - anicca
+  - mahābhūta
+  opposites: []
+  nid: 1794139124282
+  cid: 1794139124283
+  guid: 'Ny?0u9[WuV'
+- term: vedanā
+  reading: ве́дана
+  translation: ощущение, чувство
+  explanation: Приятное (sukhā), неприятное (dukkhā) или нейтральное (adukkhamasukhā) качество опыта; вторая совокупность и седьмое звено цепи. У Гое́нки — телесные ощущения, которые наблюдают с невозмутимостью (upekkhā).
+  parents:
+  - pañcakkhandha
+  - paṭicca-samuppāda
+  - cetasika
+  children:
+  - sukhā vedanā
+  - dukkhā vedanā
+  - adukkhamasukhā vedanā
+  see_also:
+  - vedanānupassanā
+  - upekkhā
+  - taṇhā
+  - vipāka
+  - phassa
+  - anusaya
+  - saññā
+  - sabbacittasādhāraṇa
+  - saupādisesā nibbānadhātu
+  - anupādisesā nibbānadhātu
+  opposites: []
+  nid: 1794139124242
+  cid: 1794139124243
+  guid: 'p^^;.LMK;}'
+- term: sukhā vedanā
+  reading: су́кха ве́дана
+  translation: приятное ощущение
+  explanation: Может питать скрытую склонность к страсти (rāgānusaya; MN 44) — ум тянется удержать.
+  parents:
+  - vedanā
+  children: []
+  see_also:
+  - lobha
+  - sukha
+  opposites:
+  - dukkhā vedanā
+  nid: 1794139124250
+  cid: 1794139124251
+  guid: 'u?5c3,.X++'
+- term: dukkhā vedanā
+  reading: ду́ккха ве́дана
+  translation: неприятное ощущение
+  explanation: Может питать скрытую склонность к отторжению (paṭighānusaya; MN 44) — ум отталкивает.
+  parents:
+  - vedanā
+  children: []
+  see_also:
+  - dosa
+  - dukkha
+  opposites:
+  - sukhā vedanā
+  nid: 1794139124252
+  cid: 1794139124253
+  guid: '!ha^K]W$F'
+- term: adukkhamasukhā vedanā
+  reading: адуккхамасу́кха ве́дана
+  translation: нейтральное ощущение
+  explanation: 'Ни приятное, ни неприятное; по MN 44 может питать склонность к неведению (avijjānusaya). На практике его легко не заметить: внимание рассеивается.'
+  parents:
+  - vedanā
+  children: []
+  see_also:
+  - moha
+  - anusaya
+  - saṅkhāra-dukkhatā
+  opposites: []
+  nid: 1794139124254
+  cid: 1794139124255
+  guid: 'wZiTYK^jim'
+- term: saññā
+  reading: са́ння
+  translation: восприятие, распознавание
+  explanation: 'Распознавание: «это синее, это жёлтое» (SN 22.79); третья совокупность. У Гое́нки — ещё и оценка («хорошо/плохо»), которая окрашивает ощущение (vedanā) и запускает реакцию (saṅkhāra).'
+  parents:
+  - pañcakkhandha
+  - cetasika
+  children: []
+  see_also:
+  - vedanā
+  - saṅkhāra
+  - sabbacittasādhāraṇa
+  opposites: []
+  nid: 1794139124244
+  cid: 1794139124245
+  guid: 'ASd3Rz`l~.'
+- term: saṅkhāra
+  reading: санкха́ра
+  translation: формирования; реакции ума
+  explanation: 'Волевые формирования (cetanā), обусловливающие будущее; четвёртая совокупность и второе звено цепи. У Гое́нки — реакции влечения (rāga) и отвращения (dosa): в випа́ссане старые всплывают и уходят, если не создавать новых. В формуле sabbe saṅkhārā (Dhp 277–278) — вообще всё обусловленное (saṅkhata).'
+  parents:
+  - pañcakkhandha
+  - paṭicca-samuppāda
+  children: []
+  see_also:
+  - kamma
+  - cetanā
+  - Aniccā vata saṅkhārā
+  - saṅkhata
+  - anusaya
+  - saññā
+  opposites: []
+  nid: 1794139124246
+  cid: 1794139124247
+  guid: 'Gq^u9^8=~W'
+- term: viññāṇa
+  reading: виння́на
+  translation: сознание
+  explanation: Сознавание объекта через одно из шести чувств (saḷāyatana); пятая совокупность и третье звено цепи.
+  parents:
+  - pañcakkhandha
+  - paṭicca-samuppāda
+  children: []
+  see_also:
+  - citta
+  - cha bāhirāni āyatanāni
+  - paṭisandhi
+  opposites: []
+  nid: 1794139124248
+  cid: 1794139124249
+  guid: 'lC&eX5w=1b'
+- term: cha bāhirāni āyatanāni
+  reading: чха́ бахира́ни аятана́ни
+  translation: шесть внешних сфер
+  explanation: 'Шесть объектов чувств: rūpa (видимое), sadda (звук), gandha (запах), rasa (вкус), phoṭṭhabba (осязаемое), dhammā (объекты ума) — MN 137. Пара к внутренним шести; о внешних идёт речь в SN 35.4.'
+  parents:
+  - section: Ум и материя
+  children: []
+  see_also:
+  - saḷāyatana
+  - phassa
+  - viññāṇa
+  - rūpa
+  opposites:
+  - term: cha ajjhattikāni āyatanāni
+    gloss: шесть внутренних сфер (органы чувств)
+  nid: 1795473553096
+  cid: 1795473553097
+  guid: 'vUB2GoaEB9'

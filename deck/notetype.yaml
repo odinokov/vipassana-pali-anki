@@ -1,0 +1,148 @@
+# The note type (Anki "model") without times. mod and usn are set by build.py.
+# css_file, qfmt_file, afmt_file name files in this folder; build.py puts their text in place of the key
+# (css, qfmt, afmt). The fields and their order are the eight fields of a card (the order of flds).
+
+id: 19248077374
+name: 'Випассана: пали → русский'
+type: 0
+sortf: 0
+did: 51904083266
+tmpls:
+- name: Пали → русский
+  ord: 0
+  qfmt_file: front.html
+  afmt_file: back.html
+  bqfmt: ''
+  bafmt: ''
+  did: null
+  bfont: ''
+  bsize: 0
+  id: null
+flds:
+- name: Термин
+  ord: 0
+  sticky: false
+  rtl: false
+  font: Liberation Sans
+  size: 20
+  description: ''
+  plainText: false
+  collapsed: false
+  excludeFromSearch: false
+  id: null
+  tag: null
+  preventDeletion: false
+  media: []
+- name: Чтение
+  ord: 1
+  sticky: false
+  rtl: false
+  font: Liberation Sans
+  size: 20
+  description: ''
+  plainText: false
+  collapsed: false
+  excludeFromSearch: false
+  id: null
+  tag: null
+  preventDeletion: false
+  media: []
+- name: Перевод
+  ord: 2
+  sticky: false
+  rtl: false
+  font: Liberation Sans
+  size: 20
+  description: ''
+  plainText: false
+  collapsed: false
+  excludeFromSearch: false
+  id: null
+  tag: null
+  preventDeletion: false
+  media: []
+- name: Пояснение
+  ord: 3
+  sticky: false
+  rtl: false
+  font: Liberation Sans
+  size: 20
+  description: ''
+  plainText: false
+  collapsed: false
+  excludeFromSearch: false
+  id: null
+  tag: null
+  preventDeletion: false
+  media: []
+- name: Онтология
+  ord: 4
+  sticky: false
+  rtl: false
+  font: Liberation Sans
+  size: 20
+  description: ''
+  plainText: false
+  collapsed: false
+  excludeFromSearch: false
+  id: null
+  tag: null
+  preventDeletion: false
+  media: []
+- name: Включает
+  ord: 5
+  sticky: false
+  rtl: false
+  font: Liberation Sans
+  size: 20
+  description: ''
+  plainText: false
+  collapsed: false
+  excludeFromSearch: false
+  id: null
+  tag: null
+  preventDeletion: false
+  media: []
+- name: Связи
+  ord: 6
+  sticky: false
+  rtl: false
+  font: Liberation Sans
+  size: 20
+  description: ''
+  plainText: false
+  collapsed: false
+  excludeFromSearch: false
+  id: null
+  tag: null
+  preventDeletion: false
+  media: []
+- name: Противоположность
+  ord: 7
+  sticky: false
+  rtl: false
+  font: Liberation Sans
+  size: 20
+  description: ''
+  plainText: false
+  collapsed: false
+  excludeFromSearch: false
+  id: null
+  tag: null
+  preventDeletion: false
+  media: []
+css_file: style.css
+latexPre: |
+  \documentclass[12pt]{article}
+  \special{papersize=3in,5in}
+  \usepackage[utf8]{inputenc}
+  \usepackage{amssymb,amsmath}
+  \pagestyle{empty}
+  \setlength{\parindent}{0in}
+  \begin{document}
+latexPost: \end{document}
+latexsvg: false
+req: [[0, any, [0, 1]]]
+originalId: 19248077374
+tags: []
+vers: []

@@ -1,0 +1,451 @@
+# Випассана::4 Практика: 27 cards. Source of the Anki deck; build.py reads this file (see deck/ for the rest of the package).
+#
+# One entry per note. Text keys (term, reading, translation, explanation) are plain text; build.py makes the HTML.
+# parents:   headword of a parent card, or {section: <title>} = the root of that tree section (a subdeck title);
+#            the order of the list is the order of the tree paths on the card.
+# children:  headwords, the order of "Включает". see_also: headwords, the order of "Связи".
+# opposites: headwords, or {term: ..., gloss: ...} for an opposite that has no card; the order of "Противоположность".
+# nid, cid, guid: the ids of the note and the card; keep them, Anki matches notes by them.
+# Tags are not stored: build.py derives them from the tree (subdeck, ancestors, headword).
+#
+# Order of the entries = study order of this subdeck: a card stands after its parents, a child after its parent
+# in the order of "Включает". build.py numbers `due` in this order (study_order), subdecks in the order 1..9.
+# build.py stops if two cards have the same headword, a reference is unknown, or a relation is one-sided
+# (parents <-> children, see_also <-> see_also, opposites <-> opposites).
+
+- term: bhāvanā
+  reading: бха́вана
+  translation: развитие ума, медитация
+  explanation: 'Букв. «взращивание». Два направления: samatha (успокоение) и vipassanā (прозрение).'
+  parents:
+  - section: Практика
+  children:
+  - samatha
+  - vipassanā
+  see_also:
+  - paṭipatti
+  - bhāvanāmayā paññā
+  - tīṇi puññakiriyavatthūni
+  opposites: []
+  nid: 1794139124294
+  cid: 1794139124295
+  guid: 'BRPxmrB>/3'
+- term: samatha
+  reading: са́матха
+  translation: успокоение
+  explanation: 'Медитация безмятежности: сосредоточение (samādhi) на одном объекте. По комментариям, подавляет загрязнения (kilesa) лишь на время; ведёт к jhāna, но само по себе не освобождает.'
+  parents:
+  - bhāvanā
+  children:
+  - ānāpānasati
+  - mettā-bhāvanā
+  - jhāna
+  see_also:
+  - samādhi
+  - appanā samādhi
+  - rūpajjhāna
+  opposites: []
+  nid: 1794139124296
+  cid: 1794139124297
+  guid: 'u[DfNmU__a'
+- term: mettā-bhāvanā
+  reading: ме́тта-бха́вана
+  translation: развитие доброжелательности
+  explanation: Распространение доброжелательности (mettā) на всех существ (sabbe sattā). На курсе Гое́нки вводится на 10-й день и затем завершает каждую медитацию.
+  parents:
+  - samatha
+  children: []
+  see_also:
+  - mettā
+  - Sabbe sattā bhavantu sukhitattā
+  - brahmavihāra
+  opposites: []
+  nid: 1794139124302
+  cid: 1794139124303
+  guid: 'E/CX#j7@h:'
+- term: jhāna
+  reading: джха́на
+  translation: медитативное поглощение
+  explanation: 'Глубокие состояния сосредоточения (samādhi); в су́ттах — четыре jhāna (позднее название — rūpajjhāna) и определение sammā-samādhi. На курсе Гое́нки специально не развиваются. В списке ниже — пять факторов первой jhāna: во второй отпадают vitakka и vicāra, в третьей — pīti, в четвёртой sukha сменяется невозмутимостью (upekkhā).'
+  parents:
+  - samatha
+  children:
+  - vitakka
+  - vicāra
+  - pīti
+  - sukha
+  - ekaggatā
+  see_also:
+  - sammā-samādhi
+  - appanā samādhi
+  - rūpajjhāna
+  opposites: []
+  nid: 1794139124304
+  cid: 1794139124305
+  guid: 'jPb*TO)F^:'
+- term: vitakka
+  reading: вита́кка
+  translation: наведение ума
+  explanation: Направление ума на объект; фактор (jhānaṅga) первой jhāna. В обычной речи — мысль, рассуждение.
+  parents:
+  - jhāna
+  children: []
+  see_also:
+  - vicāra
+  opposites: []
+  nid: 1794139124306
+  cid: 1794139124307
+  guid: 'yj$j}#.|4y'
+- term: vicāra
+  reading: вича́ра
+  translation: удержание ума
+  explanation: Продолженное исследование объекта после наведения (vitakka); фактор (jhānaṅga) первой jhāna.
+  parents:
+  - jhāna
+  children: []
+  see_also:
+  - vitakka
+  opposites: []
+  nid: 1794139124308
+  cid: 1794139124309
+  guid: 'uS}sZ74up='
+- term: sukha
+  reading: су́кха
+  translation: счастье, блаженство
+  explanation: Спокойное блаженство — фактор jhāna; в широком смысле — приятное (sukhā vedanā), счастье.
+  parents:
+  - jhāna
+  children: []
+  see_also:
+  - sukhā vedanā
+  - pīti
+  opposites:
+  - dukkha
+  nid: 1794139124310
+  cid: 1794139124311
+  guid: 'HJ)j]0yKi1'
+- term: vipassanā
+  reading: випа́ссана
+  translation: прозрение, видение как есть
+  explanation: 'Ясное, различающее видение (vi- + passanā; у Гое́нки — «видение особым образом»): прямое наблюдение ума и материи (nāmarūpa) в их истинной природе (yathābhūta) — anicca, dukkha, anattā.'
+  parents:
+  - bhāvanā
+  children:
+  - satipaṭṭhāna
+  see_also:
+  - tilakkhaṇa
+  - paññā
+  - vipassanā-ñāṇa
+  - khaṇika samādhi
+  - bhāvanāmayā paññā
+  opposites: []
+  nid: 1794139124298
+  cid: 1794139124299
+  guid: 'n2Bmye!}{n'
+- term: satipaṭṭhāna
+  reading: сатипаттха́на
+  translation: основы осознанности
+  explanation: 'Четыре области наблюдения: тело (kāya), ощущения (vedanā), ум (citta), дха́ммы (dhammā). Mahāsatipaṭṭhāna Sutta (DN 22) и Satipaṭṭhāna Sutta (MN 10) — основные тексты випа́ссаны.'
+  parents:
+  - vipassanā
+  - bodhipakkhiyā dhammā
+  children:
+  - kāyānupassanā
+  - vedanānupassanā
+  - cittānupassanā
+  - dhammānupassanā
+  see_also:
+  - sammā-sati
+  - sati
+  - anupassanā
+  - ātāpī
+  - Mahāsatipaṭṭhāna Sutta
+  - ekāyano maggo
+  opposites: []
+  nid: 1794139124312
+  cid: 1794139124313
+  guid: 'r_u:lO1vij'
+- term: kāyānupassanā
+  reading: каянупа́ссана
+  translation: созерцание тела
+  explanation: Дыхание (ānāpāna), позы (iriyāpatha), ясное понимание действий (sampajañña), части тела (paṭikūlamanasikāra), элементы (dhātumanasikāra), кладбищенские созерцания (navasivathikā).
+  parents:
+  - satipaṭṭhāna
+  children:
+  - ānāpānasati
+  - iriyāpatha
+  - sampajañña
+  - paṭikūlamanasikāra
+  - dhātumanasikāra
+  - navasivathikā
+  see_also:
+  - kāya
+  - Mahāsatipaṭṭhāna Sutta
+  - kāyagatāsati
+  opposites: []
+  nid: 1794139124314
+  cid: 1794139124315
+  guid: 'tN*O%2[fu_'
+- term: ānāpānasati
+  reading: анапанаса́ти
+  translation: осознанность дыхания
+  explanation: Осознанность вдоха и выдоха (āna — вдох, apāna — выдох); в су́ттах (MN 118) — шестнадцать шагов. У Гое́нки — наблюдение естественного дыхания без управления им. На 10-дневном курсе — первые три с половиной дня, для развития сосредоточения (samādhi).
+  parents:
+  - samatha
+  - kāyānupassanā
+  children: []
+  see_also:
+  - samādhi
+  - kāyagatāsati
+  opposites: []
+  nid: 1794139124300
+  cid: 1794139124301
+  guid: 'z4~(<+^-KS'
+- term: iriyāpatha
+  reading: ирия́патха
+  translation: позы (положения тела)
+  explanation: 'Четыре положения тела — ходьба, стояние, сидение, лежание: знать «иду», «стою», «сижу», «лежу» и, как бы ни было положено тело, знать это (MN 10, DN 22). Раздел kāyānupassanā.'
+  parents:
+  - kāyānupassanā
+  children: []
+  see_also:
+  - kāya
+  - sampajañña
+  - sati
+  opposites: []
+  nid: 1795473553104
+  cid: 1795473553105
+  guid: 'f}oU,-O>sV'
+- term: sampajañña
+  reading: сампаджа́ння
+  translation: ясное понимание
+  explanation: 'В су́ттах (MN 10) — ясное понимание своих действий: при ходьбе, взгляде, сгибании тела; по комментариям — и их цели. У Гое́нки — непрерывное понимание непостоянства (anicca) на уровне ощущений (vedanā), которое важно не терять ни на миг.'
+  parents:
+  - section: Практика
+  - kāyānupassanā
+  children: []
+  see_also:
+  - sati
+  - anicca
+  - ātāpī
+  - iriyāpatha
+  opposites: []
+  nid: 1794139124324
+  cid: 1794139124325
+  guid: 'iF4:la;z<v'
+- term: paṭikūlamanasikāra
+  reading: патикуламанасика́ра
+  translation: внимание к отвратительному (в теле)
+  explanation: 'Рассматривание собственного тела, «полного разной нечистоты»: волосы, ногти, зубы, кожа, мясо, кости… (MN 10, DN 22). В этих су́ттах так назван раздел (paṭikūlamanasikārapabba).'
+  parents:
+  - kāyānupassanā
+  children: []
+  see_also:
+  - kāya
+  - kāyagatāsati
+  - navasivathikā
+  opposites: []
+  nid: 1795473553106
+  cid: 1795473553107
+  guid: 'JacSNd1/QN'
+- term: dhātumanasikāra
+  reading: дхатуманасика́ра
+  translation: внимание к элементам
+  explanation: 'Рассматривание тела по элементам: «в этом теле есть земля, вода, огонь и ветер» (MN 10, DN 22; раздел dhātumanasikārapabba). Тот же набор — четыре великих элемента (mahābhūta).'
+  parents:
+  - kāyānupassanā
+  children: []
+  see_also:
+  - mahābhūta
+  - paṭhavī-dhātu
+  - kāya
+  opposites: []
+  nid: 1795473553108
+  cid: 1795473553109
+  guid: 'Pqq.:(]AGC'
+- term: navasivathikā
+  reading: навасива́тхика
+  translation: девять кладбищенских созерцаний
+  explanation: 'Созерцание трупа, брошенного на кладбище, на девяти стадиях распада; вывод: «это тело того же свойства и не избежит этого» (MN 10, DN 22; раздел navasivathikapabba).'
+  parents:
+  - kāyānupassanā
+  children: []
+  see_also:
+  - paṭikūlamanasikāra
+  - kāya
+  - anicca
+  - kāyagatāsati
+  opposites: []
+  nid: 1795473553110
+  cid: 1795473553111
+  guid: 'Hpk06-Z0w~'
+- term: vedanānupassanā
+  reading: ведананупа́ссана
+  translation: созерцание ощущений
+  explanation: Наблюдение ощущений — приятных (sukhā), неприятных (dukkhā), нейтральных (adukkhamasukhā) — как возникающих и исчезающих (udayabbaya). Центральный метод традиции Гое́нки.
+  parents:
+  - satipaṭṭhāna
+  children: []
+  see_also:
+  - vedanā
+  opposites: []
+  nid: 1794139124316
+  cid: 1794139124317
+  guid: 'I*k40g?Rt$'
+- term: cittānupassanā
+  reading: читтанупа́ссана
+  translation: созерцание ума
+  explanation: 'Знание текущего состояния ума: со страстью или без (sarāga, vītarāga), с отвращением или без (sadosa, vītadosa), сосредоточенный или нет (samāhita, asamāhita) и т. д.'
+  parents:
+  - satipaṭṭhāna
+  children: []
+  see_also:
+  - citta
+  opposites: []
+  nid: 1794139124318
+  cid: 1794139124319
+  guid: 'z%4RI?2W8'
+- term: dhammānupassanā
+  reading: дхамманупа́ссана
+  translation: созерцание дха́мм
+  explanation: 'Наблюдение содержаний ума через категории учения: препятствия (nīvaraṇa), совокупности (khandha), сферы чувств (āyatana), факторы пробуждения (bojjhaṅga), четыре истины (ariyasacca).'
+  parents:
+  - satipaṭṭhāna
+  children: []
+  see_also:
+  - nīvaraṇa
+  - pañcakkhandha
+  - satta bojjhaṅgā
+  - cattāri ariyasaccāni
+  - Mahāsatipaṭṭhāna Sutta
+  opposites: []
+  nid: 1794139124320
+  cid: 1794139124321
+  guid: 'w|^lYI*g7u'
+- term: anupassanā
+  reading: анупа́ссана
+  translation: созерцание
+  explanation: 'Букв. «смотреть снова и снова»: устойчивое, повторяющееся наблюдение. Вторая часть названий четырёх сатипаттха́н.'
+  parents:
+  - section: Практика
+  children: []
+  see_also:
+  - satipaṭṭhāna
+  opposites: []
+  nid: 1794139124326
+  cid: 1794139124327
+  guid: 'i#_K{r%q(s'
+- term: ātāpī
+  reading: ата́пи
+  translation: усердный, пылкий
+  explanation: 'Первое из трёх качеств в формуле сатипаттха́ны: ātāpī sampajāno satimā — «усердный, ясно понимающий, осознанный».'
+  parents:
+  - section: Практика
+  children: []
+  see_also:
+  - viriya
+  - sampajañña
+  - sati
+  - sammā-vāyāma
+  - satipaṭṭhāna
+  opposites: []
+  nid: 1794139124328
+  cid: 1794139124329
+  guid: 'oF&g$jHpB}'
+- term: udayabbaya
+  reading: удая́ббая
+  translation: возникновение и исчезновение
+  explanation: Наблюдение того, как явления возникают (udaya) и исчезают (vaya); опытная основа понимания anicca.
+  parents:
+  - section: Практика
+  children: []
+  see_also:
+  - anicca
+  - udayabbaya-ñāṇa
+  - bhaṅga
+  opposites: []
+  nid: 1794139124332
+  cid: 1794139124333
+  guid: 'NxFJP^u=(_'
+- term: bhaṅga
+  reading: бха́нга
+  translation: растворение
+  explanation: Явления видятся в момент исчезновения. У Гое́нки — переживание тела и ума как потока тонких вибраций без плотности («свободный поток»); оно тоже непостоянно (anicca), цепляться не за что.
+  parents:
+  - section: Практика
+  children: []
+  see_also:
+  - bhaṅga-ñāṇa
+  - kalāpa
+  - anicca
+  - udayabbaya
+  opposites: []
+  nid: 1794139124334
+  cid: 1794139124335
+  guid: 'r<2Fj$/*u9'
+- term: kāyagatāsati
+  reading: каягата́сати
+  translation: осознанность тела
+  explanation: 'Осознанность, направленная на тело. MN 119: дыхание, позы, ясное понимание, части тела, элементы, кладбищенские созерцания и четыре jhāna; развитая, она очень плодотворна (mahapphalā mahānisaṃsā).'
+  parents:
+  - section: Практика
+  children: []
+  see_also:
+  - paṭikūlamanasikāra
+  - navasivathikā
+  - kāyānupassanā
+  - ānāpānasati
+  - sati
+  opposites: []
+  nid: 1795473553112
+  cid: 1795473553113
+  guid: 'p=nwuKD3?t'
+- term: rūpajjhāna
+  reading: рупаджха́на
+  translation: четыре поглощения тонкоматериальной сферы
+  explanation: 'В су́ттах это просто «первая … четвёртая jhāna» (DN 2, MN 119). Название rūpajjhāna — из комментариев (в Абхидха́мме — rūpāvacarajjhāna): в отличие от бестелесных состояний (arūpa).'
+  parents:
+  - section: Практика
+  children: []
+  see_also:
+  - jhāna
+  - rūparāga
+  - arūparāga
+  - samatha
+  - appanā samādhi
+  opposites: []
+  nid: 1795473553114
+  cid: 1795473553115
+  guid: 'me#?LoyE5V'
+- term: nimitta
+  reading: ними́тта
+  translation: знак, признак
+  explanation: 'Знак, по которому ум хватает объект. В AN 4.14: при охране чувств не хвататься за знаки (na nimittaggāhī) и беречь «знак сосредоточения» (samādhinimitta), например восприятие скелета (aṭṭhikasaññā).'
+  parents:
+  - section: Практика
+  children: []
+  see_also:
+  - indriyasaṃvara
+  - anurakkhaṇāppadhāna
+  - animitta
+  - samādhi
+  opposites: []
+  nid: 1795473553116
+  cid: 1795473553117
+  guid: 'IoQxbiOc|f'
+- term: ekāyano maggo
+  reading: эка́яно ма́гго
+  translation: прямой путь
+  explanation: 'Слова в начале наставления в MN 10 и DN 22: «ekāyano ayaṃ, bhikkhave, maggo» — путь к очищению существ и к осуществлению нибба́ны: четыре satipaṭṭhāna. Значение ekāyana спорно: «прямой», «ведущий в одну сторону».'
+  parents:
+  - section: Практика
+  children: []
+  see_also:
+  - satipaṭṭhāna
+  - Mahāsatipaṭṭhāna Sutta
+  - ariyo aṭṭhaṅgiko maggo
+  - nibbāna
+  opposites: []
+  nid: 1795473553124
+  cid: 1795473553125
+  guid: 'w([j7`e,{.'

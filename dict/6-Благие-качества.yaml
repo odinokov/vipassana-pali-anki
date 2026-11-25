@@ -1,0 +1,594 @@
+# Випассана::6 Благие качества: 36 cards. Source of the Anki deck; build.py reads this file (see deck/ for the rest of the package).
+#
+# One entry per note. Text keys (term, reading, translation, explanation) are plain text; build.py makes the HTML.
+# parents:   headword of a parent card, or {section: <title>} = the root of that tree section (a subdeck title);
+#            the order of the list is the order of the tree paths on the card.
+# children:  headwords, the order of "Включает". see_also: headwords, the order of "Связи".
+# opposites: headwords, or {term: ..., gloss: ...} for an opposite that has no card; the order of "Противоположность".
+# nid, cid, guid: the ids of the note and the card; keep them, Anki matches notes by them.
+# Tags are not stored: build.py derives them from the tree (subdeck, ancestors, headword).
+#
+# Order of the entries = study order of this subdeck: a card stands after its parents, a child after its parent
+# in the order of "Включает". build.py numbers `due` in this order (study_order), subdecks in the order 1..9.
+# build.py stops if two cards have the same headword, a reference is unknown, or a relation is one-sided
+# (parents <-> children, see_also <-> see_also, opposites <-> opposites).
+
+- term: kusala-mūla
+  reading: ку́сала-му́ла
+  translation: три корня благого
+  explanation: Нежадность (alobha), неотвращение (adosa) и незаблуждение (amoha) — корни всех благих (kusala) состояний и поступков. Проявляются как щедрость (dāna), доброжелательность (mettā) и мудрость (paññā).
+  parents:
+  - section: Благие качества
+  children:
+  - alobha
+  - adosa
+  - amoha
+  see_also:
+  - kusala
+  - dāna
+  opposites:
+  - akusala-mūla
+  nid: 1794139124390
+  cid: 1794139124391
+  guid: 'pyo@u@A0w3'
+- term: alobha
+  reading: ало́бха
+  translation: нежадность
+  explanation: Отсутствие жадности (lobha); проявляется как щедрость (dāna) и отречение (nekkhamma). Первый корень благого.
+  parents:
+  - kusala-mūla
+  children: []
+  see_also:
+  - dāna
+  - nekkhamma
+  opposites:
+  - lobha
+  nid: 1794139124392
+  cid: 1794139124393
+  guid: 'wNf(V[ong('
+- term: adosa
+  reading: адо́са
+  translation: неотвращение
+  explanation: Отсутствие ненависти (dosa); проявляется как доброжелательность (mettā) и терпение (khanti). Второй корень благого.
+  parents:
+  - kusala-mūla
+  children: []
+  see_also:
+  - mettā
+  - khanti
+  opposites:
+  - dosa
+  nid: 1794139124394
+  cid: 1794139124395
+  guid: 'kSAJY.[%z7'
+- term: amoha
+  reading: амо́ха
+  translation: незаблуждение
+  explanation: Ясное видение природы явлений; по сути то же, что мудрость (paññā). Третий корень благого.
+  parents:
+  - kusala-mūla
+  children: []
+  see_also:
+  - paññā
+  opposites:
+  - moha
+  nid: 1794139124396
+  cid: 1794139124397
+  guid: 'ioYmP/yVdB'
+- term: dasa pāramiyo
+  reading: да́са пара́мийо
+  translation: десять совершенств
+  explanation: Качества, которые накапливают на пути к освобождению. Список из десяти — из поздних текстов (Buddhavaṃsa, комментарий к Jātaka), в ранних су́ттах его нет. В традиции Гое́нки медитация (bhāvanā) и служение (dhamma-sevā) на курсе развивают их все.
+  parents:
+  - section: Благие качества
+  children:
+  - dāna
+  - sīla
+  - nekkhamma
+  - paññā
+  - viriya
+  - khanti
+  - sacca
+  - adhiṭṭhāna
+  - mettā
+  - upekkhā
+  see_also:
+  - Jātaka
+  - tīṇi puññakiriyavatthūni
+  opposites: []
+  nid: 1794139124414
+  cid: 1794139124415
+  guid: 'FQo%v7C0=K'
+- term: dāna
+  reading: да́на
+  translation: щедрость, даяние
+  explanation: Добровольное даяние без расчёта на воздаяние; первое совершенство (pāramī). Курсы Гое́нки бесплатны и существуют на пожертвования тех, кто уже прошёл курс.
+  parents:
+  - dasa pāramiyo
+  children:
+  - dhammadāna
+  see_also:
+  - kusala-mūla
+  - dhamma-sevaka
+  - alobha
+  - tīṇi puññakiriyavatthūni
+  opposites: []
+  nid: 1794139124416
+  cid: 1794139124417
+  guid: 'uL*ys&ty{E'
+- term: dhammadāna
+  reading: дхаммада́на
+  translation: дар Дха́ммы
+  explanation: Дар учения. Из двух даров — вещественного (āmisadāna) и дара Дха́ммы — лучший второй (AN 2.141); «дар Дха́ммы превосходит все дары» (Dhp 354).
+  parents:
+  - dāna
+  children: []
+  see_also:
+  - Dhamma
+  - kalyāṇamitta
+  - dhamma-sevaka
+  opposites:
+  - term: āmisadāna
+    gloss: дар вещей (материальный дар)
+  nid: 1795473553120
+  cid: 1795473553121
+  guid: 'J`X&HdLVj3'
+- term: nekkhamma
+  reading: неккха́мма
+  translation: отречение
+  explanation: 'Третье совершенство (pāramī): отказ от чувственных удовольствий (kāma); на курсе — простая, почти монашеская жизнь.'
+  parents:
+  - dasa pāramiyo
+  children: []
+  see_also:
+  - sammā-saṅkappa
+  - alobha
+  opposites:
+  - kāmacchanda
+  nid: 1794139124418
+  cid: 1794139124419
+  guid: 'i_LU_YrX!@'
+- term: khanti
+  reading: кха́нти
+  translation: терпение
+  explanation: 'Шестое совершенство (pāramī): терпеливое принятие трудностей, боли и обид без раздражения.'
+  parents:
+  - dasa pāramiyo
+  children: []
+  see_also:
+  - upekkhā
+  - adosa
+  - kammassakatā
+  opposites: []
+  nid: 1794139124420
+  cid: 1794139124421
+  guid: 'zFrciPjzUF'
+- term: sacca
+  reading: са́чча
+  translation: истина, правдивость
+  explanation: 'Седьмое совершенство (pāramī): верность истине в речи и в практике. То же слово — «истина» в cattāri ariyasaccāni.'
+  parents:
+  - dasa pāramiyo
+  children: []
+  see_also:
+  - sammā-vācā
+  - cattāri ariyasaccāni
+  opposites: []
+  nid: 1794139124422
+  cid: 1794139124423
+  guid: 'r.:f4@t$cf'
+- term: adhiṭṭhāna
+  reading: адхиттха́на
+  translation: решимость
+  explanation: 'Восьмое из десяти совершенств (pāramī). На курсе с 4-го дня — три часа в день «сильной решимости»: стараться не открывать глаз, не размыкать рук и не менять позу.'
+  parents:
+  - dasa pāramiyo
+  children: []
+  see_also:
+  - viriya
+  opposites: []
+  nid: 1794139124330
+  cid: 1794139124331
+  guid: 'dL{}YH?*Y)'
+- term: brahmavihāra
+  reading: брахмавиха́ра
+  translation: божественные обители (четыре безмерных)
+  explanation: '«Божественные обители»: доброжелательность (mettā), сострадание (karuṇā), сорадование (muditā), невозмутимость (upekkhā) — без границ (appamaññā), ко всем существам.'
+  parents:
+  - section: Благие качества
+  children:
+  - mettā
+  - karuṇā
+  - muditā
+  - upekkhā
+  see_also:
+  - mettā-bhāvanā
+  opposites: []
+  nid: 1794139124424
+  cid: 1794139124425
+  guid: 'v$r9eV:wyR'
+- term: mettā
+  reading: ме́тта
+  translation: доброжелательность
+  explanation: Бескорыстное желание счастья всем существам. Первая из безмерных (brahmavihāra) и девятое совершенство (pāramī).
+  parents:
+  - brahmavihāra
+  - dasa pāramiyo
+  children: []
+  see_also:
+  - mettā-bhāvanā
+  - Sabbe sattā bhavantu sukhitattā
+  - sammā-saṅkappa
+  - adosa
+  - Bhavatu sabba maṅgalaṃ
+  - dhamma-sevaka
+  opposites:
+  - dosa
+  - byāpāda
+  nid: 1794139124426
+  cid: 1794139124427
+  guid: 'eqKD:#kPKh'
+- term: karuṇā
+  reading: ка́руна
+  translation: сострадание
+  explanation: Желание, чтобы существа освободились от страдания (dukkha).
+  parents:
+  - brahmavihāra
+  children: []
+  see_also:
+  - sammā-saṅkappa
+  opposites: []
+  nid: 1794139124428
+  cid: 1794139124429
+  guid: 'hkv/t,@]8J'
+- term: muditā
+  reading: му́дита
+  translation: сорадование
+  explanation: Радость за счастье и успехи других. По Visuddhimagga (гл. 9) её функция — отсутствие зависти (issā), а проявление — устранение недовольства (arati).
+  parents:
+  - brahmavihāra
+  children: []
+  see_also:
+  - sādhu
+  opposites:
+  - term: issā
+    gloss: зависть
+  nid: 1794139124430
+  cid: 1794139124431
+  guid: 'zVW3ZI*lwr'
+- term: bodhipakkhiyā dhammā
+  reading: бодхипа́ккхия дха́мма
+  translation: 37 качеств, ведущих к пробуждению
+  explanation: 'Семь групп (4+4+4+5+5+7+8 = 37), которые Бу́дда перед уходом назвал сутью своего учения (DN 16): основы осознанности (satipaṭṭhāna), правильные усилия (sammappadhāna), основы могущества (iddhipāda), способности (indriya), силы (bala), факторы пробуждения (bojjhaṅga) и благородный восьмеричный путь (magga). Название есть уже в су́ттах (SN 48.51), а счёт «37» закрепился в поздних текстах (Visuddhimagga).'
+  parents:
+  - section: Благие качества
+  children:
+  - satipaṭṭhāna
+  - sammappadhāna
+  - iddhipāda
+  - pañcindriya
+  - pañcabala
+  - satta bojjhaṅgā
+  - ariyo aṭṭhaṅgiko maggo
+  see_also: []
+  opposites: []
+  nid: 1794139124432
+  cid: 1794139124433
+  guid: 'P-`])xj~&-'
+- term: sammappadhāna
+  reading: саммаппадха́на
+  translation: четыре правильных усилия
+  explanation: Усилия сдерживать, отбрасывать, развивать и сохранять (AN 4.14); то же, что правильное усилие (sammā-vāyāma).
+  parents:
+  - bodhipakkhiyā dhammā
+  children:
+  - saṃvarappadhāna
+  - pahānappadhāna
+  - bhāvanāppadhāna
+  - anurakkhaṇāppadhāna
+  see_also:
+  - sammā-vāyāma
+  - viriya
+  opposites: []
+  nid: 1794139124434
+  cid: 1794139124435
+  guid: '_Y6-:EZmn'
+- term: saṃvarappadhāna
+  reading: самвараппадха́на
+  translation: усилие сдерживания
+  explanation: Не давать возникнуть неблагому (akusala) — прежде всего охраняя врата чувств (indriyasaṃvara).
+  parents:
+  - sammappadhāna
+  children:
+  - indriyasaṃvara
+  see_also: []
+  opposites: []
+  nid: 1794139124436
+  cid: 1794139124437
+  guid: 'kUk|c(CvX'
+- term: indriyasaṃvara
+  reading: индрияса́мвара
+  translation: обуздание чувств (охрана врат чувств)
+  explanation: 'Сдерживание чувств: увидев форму глазом (так же и другими чувствами), не хвататься за знак (nimitta) и подробности (anubyañjana). AN 4.14 (saṃvarappadhāna), MN 27, DN 2.'
+  parents:
+  - saṃvarappadhāna
+  children: []
+  see_also:
+  - nimitta
+  - saḷāyatana
+  - sīla
+  opposites: []
+  nid: 1795473553118
+  cid: 1795473553119
+  guid: 'KI3nP[-Pqo'
+- term: pahānappadhāna
+  reading: паханаппадха́на
+  translation: усилие отбрасывания
+  explanation: Не терпеть и отбрасывать уже возникшее неблагое (akusala) — чувственные, злобные и вредоносные мысли.
+  parents:
+  - sammappadhāna
+  children: []
+  see_also: []
+  opposites: []
+  nid: 1794139124438
+  cid: 1794139124439
+  guid: 'tuFM6g[n+)'
+- term: bhāvanāppadhāna
+  reading: бхаванаппадха́на
+  translation: усилие развития
+  explanation: Развивать ещё не возникшее благое (kusala) — прежде всего факторы пробуждения (bojjhaṅga).
+  parents:
+  - sammappadhāna
+  children: []
+  see_also: []
+  opposites: []
+  nid: 1794139124440
+  cid: 1794139124441
+  guid: 'b$.78uJT!#'
+- term: anurakkhaṇāppadhāna
+  reading: анураккханаппадха́на
+  translation: усилие сохранения
+  explanation: Беречь и укреплять уже возникшее благое (kusala) — например, «знак» сосредоточения (samādhi-nimitta).
+  parents:
+  - sammappadhāna
+  children: []
+  see_also:
+  - nimitta
+  opposites: []
+  nid: 1794139124442
+  cid: 1794139124443
+  guid: 'mEn%)Kd;CE'
+- term: iddhipāda
+  reading: иддхипа́да
+  translation: четыре основы могущества (успеха)
+  explanation: 'Качества, на которые опирается успех в практике: стремление (chanda), усилие (viriya), ум (citta) и исследование (vīmaṃsā).'
+  parents:
+  - bodhipakkhiyā dhammā
+  children:
+  - chanda
+  - viriya
+  - citta
+  - vīmaṃsā
+  see_also: []
+  opposites: []
+  nid: 1794139124444
+  cid: 1794139124445
+  guid: 'Pg(fz;Mr5~'
+- term: chanda
+  reading: чха́нда
+  translation: стремление, желание действовать
+  explanation: Благое желание достичь цели — не путать с чувственным желанием (kāmacchanda). Первая основа могущества.
+  parents:
+  - iddhipāda
+  children: []
+  see_also:
+  - kāmacchanda
+  opposites: []
+  nid: 1794139124446
+  cid: 1794139124447
+  guid: 's{2E(./%$6'
+- term: vīmaṃsā
+  reading: вима́мса
+  translation: исследование
+  explanation: Пытливое исследование и проверка на опыте; четвёртая основа могущества. Близко к исследованию дха́мм (dhamma-vicaya).
+  parents:
+  - iddhipāda
+  children: []
+  see_also:
+  - dhamma-vicaya
+  opposites: []
+  nid: 1794139124448
+  cid: 1794139124449
+  guid: 'bW]=2]Nmh]'
+- term: pañcindriya
+  reading: панчи́ндрия
+  translation: пять способностей
+  explanation: 'Способности уравновешивают попарно: веру (saddhā) — мудростью (paññā), усилие (viriya) — сосредоточением (samādhi); осознанность (sati) нужна всегда (Visuddhimagga, гл. 4).'
+  parents:
+  - bodhipakkhiyā dhammā
+  children:
+  - saddhā
+  - viriya
+  - sati
+  - samādhi
+  - paññā
+  see_also:
+  - pañcabala
+  opposites: []
+  nid: 1794139124398
+  cid: 1794139124399
+  guid: 'G#QKVaDP;p'
+- term: pañcabala
+  reading: панча́бала
+  translation: пять сил
+  explanation: 'Те же пять качеств, что и способности (indriya): в SN 48.43 их сравнивают с двумя рукавами одной реки. По комментариям, это два аспекта, а не две ступени: как способности они управляют своей областью, как силы — не колеблются противоположностями (вера — неверием (assaddhiya), усилие — ленью (kosajja), осознанность — небрежностью (pamāda), сосредоточение — беспокойством (uddhacca), мудрость — неведением (avijjā)).'
+  parents:
+  - bodhipakkhiyā dhammā
+  children:
+  - saddhā
+  - viriya
+  - sati
+  - samādhi
+  - paññā
+  see_also:
+  - pañcindriya
+  opposites: []
+  nid: 1794139124450
+  cid: 1794139124451
+  guid: 'c=]:`39t3P'
+- term: saddhā
+  reading: са́ддха
+  translation: вера, доверие
+  explanation: Доверие, основанное на понимании и опыте, а не слепая вера. Уравновешивается мудростью (paññā).
+  parents:
+  - pañcindriya
+  - pañcabala
+  children: []
+  see_also:
+  - ehipassiko
+  opposites:
+  - term: assaddhiya
+    gloss: неверие
+  - vicikicchā
+  nid: 1794139124400
+  cid: 1794139124401
+  guid: 'LkPjU:%@Pq'
+- term: satta bojjhaṅgā
+  reading: са́тта боджха́нга
+  translation: семь факторов пробуждения
+  explanation: Качества, созревающие на пути к пробуждению (bodhi). Противоположны пяти препятствиям (nīvaraṇa).
+  parents:
+  - bodhipakkhiyā dhammā
+  children:
+  - sati
+  - dhamma-vicaya
+  - viriya
+  - pīti
+  - passaddhi
+  - samādhi
+  - upekkhā
+  see_also:
+  - nīvaraṇa
+  - dhammānupassanā
+  - yoniso manasikāra
+  opposites: []
+  nid: 1794139124404
+  cid: 1794139124405
+  guid: 'sso`idnplE'
+- term: sati
+  reading: са́ти
+  translation: осознанность
+  explanation: 'Букв. «памятование»: присутствие ума при том, что происходит сейчас. В практике неотделима от ясного понимания (sampajañña).'
+  parents:
+  - pañcindriya
+  - satta bojjhaṅgā
+  - pañcabala
+  children: []
+  see_also:
+  - sammā-sati
+  - satipaṭṭhāna
+  - sampajañña
+  - manasikāra
+  - ātāpī
+  - iriyāpatha
+  - kāyagatāsati
+  opposites: []
+  nid: 1794139124322
+  cid: 1794139124323
+  guid: 'fkV6u+^sPe'
+- term: dhamma-vicaya
+  reading: дха́мма-ви́чая
+  translation: исследование дха́мм
+  explanation: 'Различение явлений и их природы: благое (kusala) или неблагое (akusala), непостоянное (anicca). Второй фактор пробуждения.'
+  parents:
+  - satta bojjhaṅgā
+  children: []
+  see_also:
+  - paññā
+  - yoniso manasikāra
+  - vīmaṃsā
+  opposites: []
+  nid: 1794139124406
+  cid: 1794139124407
+  guid: 'fW)*Zvcb7:'
+- term: viriya
+  reading: ви́рия
+  translation: усилие, энергия
+  explanation: Мужественное, настойчивое усилие в практике. Уравновешивается сосредоточением (samādhi).
+  parents:
+  - pañcindriya
+  - satta bojjhaṅgā
+  - pañcabala
+  - iddhipāda
+  - dasa pāramiyo
+  children: []
+  see_also:
+  - sammā-vāyāma
+  - ātāpī
+  - adhiṭṭhāna
+  - sammappadhāna
+  opposites:
+  - thīna-middha
+  nid: 1794139124402
+  cid: 1794139124403
+  guid: 'hE*;BK<vMc'
+- term: pīti
+  reading: пи́ти
+  translation: восторг, радость
+  explanation: 'Радостное воодушевление, порой с волнами и покалыванием в теле; четвёртый фактор пробуждения и фактор jhāna. Как и любое переживание, непостоянно (anicca): цепляться не за что.'
+  parents:
+  - satta bojjhaṅgā
+  - jhāna
+  children: []
+  see_also:
+  - sukha
+  opposites: []
+  nid: 1794139124408
+  cid: 1794139124409
+  guid: 'ED+[>&+),B'
+- term: passaddhi
+  reading: пасса́ддхи
+  translation: умиротворённость
+  explanation: Спокойствие тела и ума (kāya-passaddhi, citta-passaddhi), утихание беспокойства (uddhacca); пятый фактор пробуждения.
+  parents:
+  - satta bojjhaṅgā
+  children: []
+  see_also: []
+  opposites:
+  - uddhacca-kukkucca
+  nid: 1794139124410
+  cid: 1794139124411
+  guid: 'jf<rS.:f]}'
+- term: upekkhā
+  reading: упе́ккха
+  translation: невозмутимость
+  explanation: 'Ровный ум, не реагирующий ни влечением (rāga), ни отвращением (dosa). В практике Гое́нки — ключ: наблюдать любое ощущение (vedanā) без реакции.'
+  parents:
+  - satta bojjhaṅgā
+  - brahmavihāra
+  - dasa pāramiyo
+  children: []
+  see_also:
+  - vedanā
+  - saṅkhārupekkhā-ñāṇa
+  - khanti
+  opposites: []
+  nid: 1794139124412
+  cid: 1794139124413
+  guid: 'P,-XLMMiR0'
+- term: tīṇi puññakiriyavatthūni
+  reading: ти́ни пуннякирияваттху́ни
+  translation: три основания заслуги
+  explanation: 'Три основы добрых дел, приносящих заслугу (puñña): даяние (dānamaya), нравственность (sīlamaya) и развитие ума (bhāvanāmaya) — AN 8.36, Itivuttaka 60, DN 33.'
+  parents:
+  - section: Благие качества
+  children: []
+  see_also:
+  - dāna
+  - sīla
+  - bhāvanā
+  - dasa pāramiyo
+  opposites: []
+  nid: 1795473553122
+  cid: 1795473553123
+  guid: 'D%jn#Q#E)$'

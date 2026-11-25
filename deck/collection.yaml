@@ -1,0 +1,46 @@
+# The row of the table col, and the columns of notes and cards that are the same for every row.
+# Not here: mod (build time), models/decks/dconf (notetype.yaml, decks.yaml), id and the fields of a note or
+# card (dict/). Every note and card gets mod = build time and usn = -1; due comes from the study order.
+# conf is the collection config of Anki (curModel and activeDecks are as exported).
+
+id: 1
+crt: 1693764000
+scm: 1794139472536
+ver: 11
+dty: 0
+usn: 0
+ls: 0
+conf:
+  creationOffset: -480
+  sortBackwards: false
+  dueCounts: true
+  curModel: 1794139472537
+  collapseTime: 1200
+  dayLearnFirst: false
+  timeLim: 0
+  sched2021: true
+  newSpread: 0
+  addToCur: true
+  schedVer: 2
+  nextPos: 1
+  activeDecks: [1]
+  curDeck: 1
+  sortType: noteFld
+  estTimes: true
+tags: '{}'
+notes_row:
+  flags: 0
+  data: ''
+cards_row:
+  ord: 0
+  type: 0
+  queue: 0
+  ivl: 0
+  factor: 0
+  reps: 0
+  lapses: 0
+  left: 0
+  odue: 0
+  odid: 0
+  flags: 0
+  data: '{}'

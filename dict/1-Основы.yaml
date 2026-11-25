@@ -1,0 +1,642 @@
+# Випассана::1 Основы: 40 cards. Source of the Anki deck; build.py reads this file (see deck/ for the rest of the package).
+#
+# One entry per note. Text keys (term, reading, translation, explanation) are plain text; build.py makes the HTML.
+# parents:   headword of a parent card, or {section: <title>} = the root of that tree section (a subdeck title);
+#            the order of the list is the order of the tree paths on the card.
+# children:  headwords, the order of "Включает". see_also: headwords, the order of "Связи".
+# opposites: headwords, or {term: ..., gloss: ...} for an opposite that has no card; the order of "Противоположность".
+# nid, cid, guid: the ids of the note and the card; keep them, Anki matches notes by them.
+# Tags are not stored: build.py derives them from the tree (subdeck, ancestors, headword).
+#
+# Order of the entries = study order of this subdeck: a card stands after its parents, a child after its parent
+# in the order of "Включает". build.py numbers `due` in this order (study_order), subdecks in the order 1..9.
+# build.py stops if two cards have the same headword, a reference is unknown, or a relation is one-sided
+# (parents <-> children, see_also <-> see_also, opposites <-> opposites).
+
+- term: tiratana
+  reading: тира́тана
+  translation: три драгоценности
+  explanation: Бу́дда, Дха́мма и Са́нгха — то, в чём принимают прибежище (saraṇa). В традиции Гое́нки это прибежище в качествах пробуждения, а не в личности или секте.
+  parents:
+  - section: Основы
+  children:
+  - Buddha
+  - Dhamma
+  - Saṅgha
+  see_also:
+  - tisaraṇa
+  - pañcasīla
+  - saraṇa
+  - cattāri sotāpannassa aṅgāni
+  opposites: []
+  nid: 1794139124132
+  cid: 1794139124133
+  guid: 'spAr?pUkI#'
+- term: Buddha
+  reading: Бу́дда
+  translation: Пробуждённый
+  explanation: Тот, кто сам открыл путь к освобождению и указывает его другим. Исторический Бу́дда — Сиддха́ттха Го́тама.
+  parents:
+  - tiratana
+  children: []
+  see_also:
+  - arahant
+  - Namo tassa bhagavato arahato sammā-sambuddhassa
+  - Jātaka
+  opposites: []
+  nid: 1794139124134
+  cid: 1794139124135
+  guid: 'P,BtdvRnzU'
+- term: Dhamma
+  reading: Дха́мма
+  translation: учение; закон природы, истина
+  explanation: Учение Бу́дды и сам закон, который оно описывает, — то, как всё есть на самом деле (у Гое́нки — «закон природы»). Во мн. ч. (dhammā) — явления, объекты ума.
+  parents:
+  - tiratana
+  children:
+  - dhamma-guṇa
+  - tividho saddhammo
+  see_also:
+  - dhammadāna
+  opposites: []
+  nid: 1794139124136
+  cid: 1794139124137
+  guid: 'E7ylo^S;R*'
+- term: dhamma-guṇa
+  reading: дха́мма-гу́на
+  translation: качества Дха́ммы
+  explanation: 'Шесть качеств из канонической формулы (AN 6.10), которую читают в традиционной декламации: Дха́мма хорошо изложена (svākkhāto), видима здесь и сейчас (sandiṭṭhiko), вневременна (akāliko), приглашает проверить (ehipassiko), ведёт к цели (opaneyyiko), постигается лично (paccattaṃ veditabbo viññūhi).'
+  parents:
+  - Dhamma
+  children:
+  - svākkhāto
+  - sandiṭṭhiko
+  - akāliko
+  - ehipassiko
+  - opaneyyiko
+  - paccattaṃ veditabbo viññūhi
+  see_also: []
+  opposites: []
+  nid: 1794139124558
+  cid: 1794139124559
+  guid: 'N}7y(.n;V0'
+- term: svākkhāto
+  reading: сваккха́то
+  translation: хорошо изложенная
+  explanation: Дха́мма ясно и полно провозглашена Благословенным (bhagavatā).
+  parents:
+  - dhamma-guṇa
+  children: []
+  see_also: []
+  opposites: []
+  nid: 1794139124560
+  cid: 1794139124561
+  guid: 'g_NM_g#]WM'
+- term: sandiṭṭhiko
+  reading: санди́ттхико
+  translation: видимая здесь и сейчас
+  explanation: Её плоды проверяются непосредственно, в этой жизни (diṭṭheva dhamme), на собственном опыте.
+  parents:
+  - dhamma-guṇa
+  children: []
+  see_also:
+  - paccattaṃ veditabbo viññūhi
+  opposites: []
+  nid: 1794139124562
+  cid: 1794139124563
+  guid: 'e$0fFNqT^!'
+- term: akāliko
+  reading: ака́лико
+  translation: вневременная
+  explanation: Даёт плоды сразу, а не когда-то потом; верна во все времена.
+  parents:
+  - dhamma-guṇa
+  children: []
+  see_also: []
+  opposites: []
+  nid: 1794139124564
+  cid: 1794139124565
+  guid: 'bUY,Fn1vki'
+- term: ehipassiko
+  reading: эхипа́ссико
+  translation: «приди и посмотри»
+  explanation: Приглашает проверить на опыте, а не принять на веру.
+  parents:
+  - dhamma-guṇa
+  children: []
+  see_also:
+  - saddhā
+  - Kālāma Sutta
+  opposites: []
+  nid: 1794139124566
+  cid: 1794139124567
+  guid: 'fDsQmm%TD='
+- term: opaneyyiko
+  reading: опане́йико
+  translation: ведущая к цели
+  explanation: Ведёт вперёд, к освобождению; её стоит «приблизить» к себе — применить.
+  parents:
+  - dhamma-guṇa
+  children: []
+  see_also: []
+  opposites: []
+  nid: 1794139124568
+  cid: 1794139124569
+  guid: 'd#Dm^#?z2M'
+- term: paccattaṃ veditabbo viññūhi
+  reading: пачча́ттам ведита́ббо винню́хи
+  translation: постигается мудрыми лично
+  explanation: Каждый должен пережить её сам; чужой опыт не освобождает.
+  parents:
+  - dhamma-guṇa
+  children: []
+  see_also:
+  - bhāvanāmayā paññā
+  - sandiṭṭhiko
+  opposites: []
+  nid: 1794139124570
+  cid: 1794139124571
+  guid: 'ew83q`DzXO'
+- term: tividho saddhammo
+  reading: ти́видхо саддха́ммо
+  translation: три аспекта истинной Дха́ммы
+  explanation: 'Изучение (pariyatti), практика (paṭipatti) и постижение (paṭivedha) — схема комментариев. Гое́нка делал акцент на практике: одна теория не освобождает.'
+  parents:
+  - Dhamma
+  children:
+  - pariyatti
+  - paṭipatti
+  - paṭivedha
+  see_also:
+  - tisso paññā
+  opposites: []
+  nid: 1794139124572
+  cid: 1794139124573
+  guid: 's5Z9gqgz#:'
+- term: pariyatti
+  reading: пария́тти
+  translation: изучение
+  explanation: 'Теоретическое знание учения: слушание бесед, чтение текстов.'
+  parents:
+  - tividho saddhammo
+  children: []
+  see_also:
+  - sutamayā paññā
+  - saddhammassavana
+  opposites: []
+  nid: 1794139124574
+  cid: 1794139124575
+  guid: 'ne:JuOGJ%&'
+- term: paṭipatti
+  reading: патипа́тти
+  translation: практика
+  explanation: Применение учения — sīla, samādhi, paññā — в медитации и в жизни.
+  parents:
+  - tividho saddhammo
+  children: []
+  see_also:
+  - bhāvanā
+  - dhammānudhammappaṭipatti
+  - bhāvanāmayā paññā
+  opposites: []
+  nid: 1794139124576
+  cid: 1794139124577
+  guid: 'GOJSk5A<QB'
+- term: paṭivedha
+  reading: пативе́дха
+  translation: постижение
+  explanation: Прямое проникновение в истину — плоды практики вплоть до nibbāna.
+  parents:
+  - tividho saddhammo
+  children: []
+  see_also:
+  - magga-ñāṇa
+  opposites: []
+  nid: 1794139124578
+  cid: 1794139124579
+  guid: 'mH-K8P4`IU'
+- term: Saṅgha
+  reading: Са́нгха
+  translation: община
+  explanation: 'Община монахов и монахинь (bhikkhu, bhikkhunī). В высшем смысле — община благородных учеников (ariya-saṅgha), «четыре пары, восемь личностей»: все, кто достиг хотя бы пути вхождения в поток (sotāpatti).'
+  parents:
+  - tiratana
+  children:
+  - bhikkhu
+  - bhikkhunī
+  see_also:
+  - ariya-puggala
+  - kalyāṇamitta
+  - cattāri purisayugāni
+  - aṭṭha purisapuggalā
+  opposites: []
+  nid: 1794139124138
+  cid: 1794139124139
+  guid: 'l?0X,wePJ9'
+- term: bhikkhu
+  reading: бхи́ккху
+  translation: монах
+  explanation: Полностью посвящённый монах; букв. «просящий подаяние». Бу́дда часто обращается к монахам «bhikkhave» — например, к пятерым в SN 56.11.
+  parents:
+  - Saṅgha
+  children: []
+  see_also:
+  - bhikkhunī
+  - Vinaya-piṭaka
+  opposites: []
+  nid: 1795473553070
+  cid: 1795473553071
+  guid: 'NxBk;mq03C'
+- term: bhikkhunī
+  reading: бхи́ккхуни
+  translation: монахиня
+  explanation: Полностью посвящённая монахиня. В DN 16 названа вместе с монахами (bhikkhu), мирянами (upāsaka) и мирянками (upāsikā).
+  parents:
+  - Saṅgha
+  children: []
+  see_also:
+  - bhikkhu
+  - Vinaya-piṭaka
+  opposites: []
+  nid: 1795473553072
+  cid: 1795473553073
+  guid: 'p?TFGGW0z$'
+- term: tisikkhā
+  reading: тиси́ккха
+  translation: три тренировки
+  explanation: 'Нравственность (sīla) → сосредоточение (samādhi) → мудрость (paññā): каркас всего пути. В каноне — высшая нравственность, высший ум и высшая мудрость (adhisīla, adhicitta, adhipaññā; DN 33). Курс идёт в том же порядке: предписания, затем ānāpāna, затем vipassanā.'
+  parents:
+  - section: Основы
+  children:
+  - sīla
+  - samādhi
+  - paññā
+  see_also:
+  - ariyo aṭṭhaṅgiko maggo
+  opposites: []
+  nid: 1794139124140
+  cid: 1794139124141
+  guid: 'ivfiJ0P2ab'
+- term: sīla
+  reading: си́ла
+  translation: нравственность
+  explanation: Воздержание от поступков тела и речи, вредящих другим и себе. Без неё ум неспокоен, а сосредоточение (samādhi) неустойчиво.
+  parents:
+  - tisikkhā
+  - dasa pāramiyo
+  children:
+  - sammā-vācā
+  - sammā-kammanta
+  - sammā-ājīva
+  - sikkhāpada
+  - pañcasīla
+  - aṭṭhasīla
+  see_also:
+  - kusala
+  - sīla-visuddhi
+  - ariyo tuṇhībhāvo
+  - Vinaya-piṭaka
+  - indriyasaṃvara
+  - tīṇi puññakiriyavatthūni
+  - cattāri sotāpannassa aṅgāni
+  opposites: []
+  nid: 1794139124142
+  cid: 1794139124143
+  guid: 'e!$6sQ[AuP'
+- term: sammā-vācā
+  reading: са́мма-ва́ча
+  translation: правильная речь
+  explanation: Отказ от лжи (musāvāda), клеветы (pisuṇā vācā), грубых слов (pharusā vācā) и пустой болтовни (samphappalāpa). Группа sīla.
+  parents:
+  - ariyo aṭṭhaṅgiko maggo
+  - sīla
+  children: []
+  see_also:
+  - ariyo tuṇhībhāvo
+  - sacca
+  opposites: []
+  nid: 1794139124154
+  cid: 1794139124155
+  guid: 'K<P6kblfK1'
+- term: sammā-kammanta
+  reading: са́мма-камма́нта
+  translation: правильное действие
+  explanation: Отказ от убийства (pāṇātipāta), воровства (adinnādāna) и сексуальных проступков (kāmesu micchācāra). Группа sīla.
+  parents:
+  - ariyo aṭṭhaṅgiko maggo
+  - sīla
+  children: []
+  see_also:
+  - pañcasīla
+  opposites: []
+  nid: 1794139124156
+  cid: 1794139124157
+  guid: 'B<Hv[q2O:X'
+- term: sammā-ājīva
+  reading: са́мма-аджи́ва
+  translation: правильный образ жизни
+  explanation: 'Заработок без вреда другим: без торговли оружием, живыми существами, мясом, опьяняющими веществами и ядами (AN 5.177). Группа sīla.'
+  parents:
+  - ariyo aṭṭhaṅgiko maggo
+  - sīla
+  children: []
+  see_also: []
+  opposites: []
+  nid: 1794139124158
+  cid: 1794139124159
+  guid: 'NEMT^O#nb+'
+- term: sikkhāpada
+  reading: сиккха́пада
+  translation: предписание (правило тренировки)
+  explanation: Правило тренировки. В Khuddakapāṭha 2 десять предписаний, у каждого формула «…veramaṇisikkhāpadaṃ samādiyāmi» — «беру на себя правило воздерживаться от…». На курсе берут пять или восемь (pañcasīla, aṭṭhasīla).
+  parents:
+  - sīla
+  children: []
+  see_also:
+  - pañcasīla
+  - aṭṭhasīla
+  - Vinaya-piṭaka
+  opposites: []
+  nid: 1795473553068
+  cid: 1795473553069
+  guid: 'v=3gg3&LY@'
+- term: pañcasīla
+  reading: панчаси́ла
+  translation: пять предписаний
+  explanation: Воздержание (veramaṇī) от убийства (pāṇātipāta), воровства (adinnādāna), сексуальных проступков (kāmesu micchācāra), лжи (musāvāda) и опьяняющих веществ (surā-meraya-majja). На курсе третье предписание понимается как полное воздержание (abrahmacariyā veramaṇī).
+  parents:
+  - sīla
+  children: []
+  see_also:
+  - aṭṭhasīla
+  - sammā-kammanta
+  - tiratana
+  - sīla-visuddhi
+  - sikkhāpada
+  opposites: []
+  nid: 1794139124168
+  cid: 1794139124169
+  guid: 'd`zWS9gce9'
+- term: aṭṭhasīla
+  reading: аттхаси́ла
+  translation: восемь предписаний
+  explanation: 'Пять предписаний (третье — полное воздержание) и ещё три: не есть после полудня (vikāla-bhojana), избегать развлечений и украшений (nacca-gīta…, mālā-gandha…) и высоких роскошных постелей (uccāsayana-mahāsayana). На курсе их соблюдают «старые студенты».'
+  parents:
+  - sīla
+  children: []
+  see_also:
+  - pañcasīla
+  - sikkhāpada
+  opposites: []
+  nid: 1794139124170
+  cid: 1794139124171
+  guid: 'AFHq}I.NrU'
+- term: samādhi
+  reading: сама́дхи
+  translation: сосредоточение
+  explanation: Собранность (ekaggatā) и устойчивость ума на одном объекте. На курсе развивается наблюдением дыхания (ānāpāna).
+  parents:
+  - tisikkhā
+  - pañcindriya
+  - satta bojjhaṅgā
+  - pañcabala
+  children:
+  - sammā-vāyāma
+  - sammā-sati
+  - sammā-samādhi
+  see_also:
+  - ānāpānasati
+  - ekaggatā
+  - samatha
+  - khaṇika samādhi
+  - upacāra samādhi
+  - citta-visuddhi
+  - nimitta
+  opposites: []
+  nid: 1794139124144
+  cid: 1794139124145
+  guid: 'G8I&:ezQ)P'
+- term: sammā-vāyāma
+  reading: са́мма-вая́ма
+  translation: правильное усилие
+  explanation: 'Четыре усилия (sammappadhāna): не допускать и устранять неблагое (akusala), порождать и поддерживать благое (kusala). Группа samādhi.'
+  parents:
+  - ariyo aṭṭhaṅgiko maggo
+  - samādhi
+  children: []
+  see_also:
+  - viriya
+  - ātāpī
+  - sammappadhāna
+  opposites: []
+  nid: 1794139124160
+  cid: 1794139124161
+  guid: 'b9rd9292(m'
+- term: sammā-sati
+  reading: са́мма-са́ти
+  translation: правильная осознанность
+  explanation: Осознавание тела (kāya), ощущений (vedanā), ума (citta) и дха́мм (dhammā) такими, как они есть, — четыре satipaṭṭhāna. Группа samādhi.
+  parents:
+  - ariyo aṭṭhaṅgiko maggo
+  - samādhi
+  children: []
+  see_also:
+  - sati
+  - satipaṭṭhāna
+  opposites: []
+  nid: 1794139124162
+  cid: 1794139124163
+  guid: 'QyODGYK?xa'
+- term: sammā-samādhi
+  reading: са́мма-сама́дхи
+  translation: правильное сосредоточение
+  explanation: В су́ттах — четыре jhāna. У Гое́нки — сосредоточение на реальности момента, без слов и образов, без влечения (rāga) и отвращения (dosa). Группа samādhi.
+  parents:
+  - ariyo aṭṭhaṅgiko maggo
+  - samādhi
+  children: []
+  see_also:
+  - jhāna
+  - ekaggatā
+  opposites: []
+  nid: 1794139124164
+  cid: 1794139124165
+  guid: 'q[ResOB&k9'
+- term: paññā
+  reading: па́ння
+  translation: мудрость, понимание
+  explanation: 'Понимание реальности на собственном опыте: непостоянство (anicca), страдание (dukkha), безличность (anattā). Развивается в випа́ссане.'
+  parents:
+  - tisikkhā
+  - pañcindriya
+  - pañcabala
+  - dasa pāramiyo
+  children:
+  - sammā-diṭṭhi
+  - sammā-saṅkappa
+  - tisso paññā
+  see_also:
+  - vipassanā
+  - tilakkhaṇa
+  - amoha
+  - dhamma-vicaya
+  opposites:
+  - moha
+  nid: 1794139124146
+  cid: 1794139124147
+  guid: '_HTW~%8C.'
+- term: sammā-diṭṭhi
+  reading: са́мма-ди́ттхи
+  translation: правильное воззрение
+  explanation: Понимание четырёх истин (ariyasacca) и закона причины и следствия (kamma). Группа paññā.
+  parents:
+  - ariyo aṭṭhaṅgiko maggo
+  - paññā
+  children: []
+  see_also:
+  - cattāri ariyasaccāni
+  - kamma
+  - diṭṭhi
+  opposites:
+  - term: micchā-diṭṭhi
+    gloss: ложное воззрение
+  nid: 1794139124150
+  cid: 1794139124151
+  guid: 'G;NzY.$oy4'
+- term: sammā-saṅkappa
+  reading: са́мма-санка́ппа
+  translation: правильное намерение
+  explanation: Намерения отречения (nekkhamma), доброжелательности (abyāpāda) и ненасилия (avihiṃsā). Группа paññā.
+  parents:
+  - ariyo aṭṭhaṅgiko maggo
+  - paññā
+  children: []
+  see_also:
+  - nekkhamma
+  - mettā
+  - karuṇā
+  opposites: []
+  nid: 1794139124152
+  cid: 1794139124153
+  guid: 'qV&_t_OU|^'
+- term: tisso paññā
+  reading: ти́ссо па́ння
+  translation: три вида мудрости
+  explanation: 'Мудрость услышанного (sutamayā), размышления (cintāmayā) и собственного опыта (bhāvanāmayā); в DN 33 порядок иной: cintāmayā, sutamayā, bhāvanāmayā. У Гое́нки акцент: освобождает только третья.'
+  parents:
+  - paññā
+  children:
+  - sutamayā paññā
+  - cintāmayā paññā
+  - bhāvanāmayā paññā
+  see_also:
+  - tividho saddhammo
+  opposites: []
+  nid: 1794139124580
+  cid: 1794139124581
+  guid: 'Nh*[MJ_M@:'
+- term: sutamayā paññā
+  reading: сута́мая па́ння
+  translation: мудрость услышанного
+  explanation: Знание, полученное от других (suta — «услышанное»), — из бесед и книг. Вдохновляет, но остаётся заимствованным.
+  parents:
+  - tisso paññā
+  children: []
+  see_also:
+  - pariyatti
+  - saddhammassavana
+  opposites: []
+  nid: 1794139124582
+  cid: 1794139124583
+  guid: 'yEJa[528I+'
+- term: cintāmayā paññā
+  reading: чинта́мая па́ння
+  translation: мудрость размышления
+  explanation: 'Интеллектуальное понимание (cintā — «размышление»): обдумать, проверить логикой.'
+  parents:
+  - tisso paññā
+  children: []
+  see_also: []
+  opposites: []
+  nid: 1794139124584
+  cid: 1794139124585
+  guid: 'u^11e8TDY|'
+- term: bhāvanāmayā paññā
+  reading: бхавана́мая па́ння
+  translation: мудрость опыта (букв. «мудрость развития»)
+  explanation: 'Понимание, рождённое собственной практикой (bhāvanā), — прямое переживание непостоянства (anicca). У Гое́нки акцент: только она освобождает.'
+  parents:
+  - tisso paññā
+  children: []
+  see_also:
+  - vipassanā
+  - paṭipatti
+  - paccattaṃ veditabbo viññūhi
+  - bhāvanā
+  opposites: []
+  nid: 1794139124586
+  cid: 1794139124587
+  guid: 'Oy;f>0P,qu'
+- term: majjhimā paṭipadā
+  reading: ма́джхима пати́пада
+  translation: срединный путь
+  explanation: Путь между потаканием чувственным удовольствиям (kāmasukhallikānuyoga) и самоистязанием (attakilamathānuyoga), провозглашённый в первой проповеди (SN 56.11); это и есть восьмеричный путь.
+  parents:
+  - section: Основы
+  children: []
+  see_also:
+  - ariyo aṭṭhaṅgiko maggo
+  - cattāri ariyasaccāni
+  - Dhammacakkappavattana Sutta
+  opposites: []
+  nid: 1794139124166
+  cid: 1794139124167
+  guid: 'y.9h,9:A%s'
+- term: kusala
+  reading: ку́сала
+  translation: благое, умелое
+  explanation: Состояния и поступки, укоренённые в нежадности (alobha), неотвращении (adosa) и незаблуждении (amoha); ведут к счастью и освобождению.
+  parents:
+  - section: Основы
+  children: []
+  see_also:
+  - kusala-mūla
+  - sīla
+  opposites:
+  - akusala
+  nid: 1794139124172
+  cid: 1794139124173
+  guid: 'PT)Y2QWZFv'
+- term: akusala
+  reading: аку́сала
+  translation: неблагое, неумелое
+  explanation: Состояния и поступки, укоренённые в жадности (lobha), ненависти (dosa) и заблуждении (moha); ведут к страданию.
+  parents:
+  - section: Основы
+  children: []
+  see_also:
+  - akusala-mūla
+  - kilesa
+  - Kālāma Sutta
+  - ahirika
+  - anottappa
+  opposites:
+  - kusala
+  nid: 1794139124174
+  cid: 1794139124175
+  guid: 'D-g4{3{=_#'
+- term: saraṇa
+  reading: са́рана
+  translation: прибежище
+  explanation: Защита, опора. По Dhp 190–192, тот, кто принял прибежище в Бу́дде, Дха́мме и Са́нгхе, видит мудростью четыре благородные истины; такое прибежище освобождает от всякого страдания.
+  parents:
+  - section: Основы
+  children: []
+  see_also:
+  - tisaraṇa
+  - tiratana
+  - cattāri ariyasaccāni
+  opposites: []
+  nid: 1795473553066
+  cid: 1795473553067
+  guid: 'HBDx-(3LO<'

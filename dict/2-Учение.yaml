@@ -1,0 +1,937 @@
+# Випассана::2 Учение: 55 cards. Source of the Anki deck; build.py reads this file (see deck/ for the rest of the package).
+#
+# One entry per note. Text keys (term, reading, translation, explanation) are plain text; build.py makes the HTML.
+# parents:   headword of a parent card, or {section: <title>} = the root of that tree section (a subdeck title);
+#            the order of the list is the order of the tree paths on the card.
+# children:  headwords, the order of "Включает". see_also: headwords, the order of "Связи".
+# opposites: headwords, or {term: ..., gloss: ...} for an opposite that has no card; the order of "Противоположность".
+# nid, cid, guid: the ids of the note and the card; keep them, Anki matches notes by them.
+# Tags are not stored: build.py derives them from the tree (subdeck, ancestors, headword).
+#
+# Order of the entries = study order of this subdeck: a card stands after its parents, a child after its parent
+# in the order of "Включает". build.py numbers `due` in this order (study_order), subdecks in the order 1..9.
+# build.py stops if two cards have the same headword, a reference is unknown, or a relation is one-sided
+# (parents <-> children, see_also <-> see_also, opposites <-> opposites).
+
+- term: cattāri ariyasaccāni
+  reading: чатта́ри ариясачча́ни
+  translation: четыре благородные истины
+  explanation: 'Суть первой проповеди (SN 56.11): страдание (dukkha), его причина (samudaya), его прекращение (nirodha) и путь к прекращению (magga).'
+  parents:
+  - section: Учение
+  children:
+  - dukkha-sacca
+  - samudaya-sacca
+  - nirodha-sacca
+  - magga-sacca
+  see_also:
+  - tilakkhaṇa
+  - sammā-diṭṭhi
+  - majjhimā paṭipadā
+  - dhammānupassanā
+  - sacca
+  - saraṇa
+  - Dhammacakkappavattana Sutta
+  opposites: []
+  nid: 1794139124176
+  cid: 1794139124177
+  guid: 'eo`.:^d-Z|'
+- term: dukkha-sacca
+  reading: ду́ккха-са́чча
+  translation: истина о страдании
+  explanation: Рождение (jāti), старость (jarā), болезнь (byādhi), смерть (maraṇa), встреча с неприятным, разлука с приятным, неполучение желаемого — страдание; «пять совокупностей цепляния (pañcupādānakkhandhā) — страдание» (SN 56.11). Эту истину нужно полностью понять (pariññeyya).
+  parents:
+  - cattāri ariyasaccāni
+  children:
+  - pañcupādānakkhandha
+  see_also:
+  - dukkha
+  - pañcakkhandha
+  - jarā-maraṇa
+  opposites: []
+  nid: 1794139124178
+  cid: 1794139124179
+  guid: 'LbvP,ZH<V#'
+- term: pañcupādānakkhandha
+  reading: панчупаданаккха́ндха
+  translation: пять совокупностей цепляния
+  explanation: 'Совокупности (khandha), которые служат предметом цепляния и связаны с āsava (sāsava upādāniya, SN 22.48). Именно они — страдание: «saṅkhittena pañcupādānakkhandhā dukkhā» (SN 56.11).'
+  parents:
+  - dukkha-sacca
+  children: []
+  see_also:
+  - pañcakkhandha
+  - upādāna
+  - dukkha
+  opposites: []
+  nid: 1795473553094
+  cid: 1795473553095
+  guid: 'Leq:4zXEQv'
+- term: samudaya-sacca
+  reading: саму́дая-са́чча
+  translation: истина о причине страдания
+  explanation: 'Причина страдания — жажда (taṇhā): к чувственным удовольствиям (kāma), к существованию (bhava), к несуществованию (vibhava). Причину нужно отбросить (pahātabba).'
+  parents:
+  - cattāri ariyasaccāni
+  children: []
+  see_also:
+  - taṇhā
+  opposites: []
+  nid: 1794139124180
+  cid: 1794139124181
+  guid: 'cPQS^B|Qya'
+- term: nirodha-sacca
+  reading: ниро́дха-са́чча
+  translation: истина о прекращении страдания
+  explanation: Полное угасание жажды (taṇhā), а вместе с ней и страдания, — nibbāna. Прекращение нужно осуществить (sacchikātabba).
+  parents:
+  - cattāri ariyasaccāni
+  children: []
+  see_also:
+  - nibbāna
+  opposites: []
+  nid: 1794139124182
+  cid: 1794139124183
+  guid: 'q<-!n@%8H!'
+- term: magga-sacca
+  reading: ма́гга-са́чча
+  translation: истина о пути
+  explanation: 'Полностью — dukkha-nirodha-gāminī paṭipadā, «путь, ведущий к прекращению страдания»: благородный восьмеричный путь (ariyo aṭṭhaṅgiko maggo). Путь нужно развивать (bhāvetabba).'
+  parents:
+  - cattāri ariyasaccāni
+  children:
+  - ariyo aṭṭhaṅgiko maggo
+  see_also: []
+  opposites: []
+  nid: 1794139124184
+  cid: 1794139124185
+  guid: 'MGuMM+<8rM'
+- term: ariyo aṭṭhaṅgiko maggo
+  reading: а́рийо аттха́нгико ма́гго
+  translation: благородный восьмеричный путь
+  explanation: 'Путь к прекращению страдания — четвёртая истина (magga-sacca). По MN 44 восемь факторов входят в три группы (khandha): нравственность (sīla), сосредоточение (samādhi) и мудрость (paññā).'
+  parents:
+  - magga-sacca
+  - bodhipakkhiyā dhammā
+  children:
+  - sammā-diṭṭhi
+  - sammā-saṅkappa
+  - sammā-vācā
+  - sammā-kammanta
+  - sammā-ājīva
+  - sammā-vāyāma
+  - sammā-sati
+  - sammā-samādhi
+  see_also:
+  - majjhimā paṭipadā
+  - tisikkhā
+  - sotāpatti
+  - ekāyano maggo
+  opposites: []
+  nid: 1794139124148
+  cid: 1794139124149
+  guid: 'zOUuw:5HPK'
+- term: tilakkhaṇa
+  reading: тила́ккхана
+  translation: три характеристики
+  explanation: Непостоянство (anicca) и неудовлетворительность (dukkha) — свойства всего обусловленного (sabbe saṅkhārā), безличность (anattā) — всех дха́мм вообще (sabbe dhammā; Dhp 277–279). Сам термин tilakkhaṇa — комментаторский. Прямое постижение трёх характеристик и есть прозрение (vipassanā).
+  parents:
+  - section: Учение
+  children:
+  - anicca
+  - dukkha
+  - anattā
+  see_also:
+  - vipassanā
+  - paññā
+  - sammasana-ñāṇa
+  - cattāri ariyasaccāni
+  - saṅkhata
+  - vimokkha-mukha
+  - Dhammapada
+  opposites: []
+  nid: 1794139124186
+  cid: 1794139124187
+  guid: 'sK6$b-xBgA'
+- term: anicca
+  reading: ани́чча
+  translation: непостоянство
+  explanation: 'Всё обусловленное возникает и исчезает (udayabbaya): «sabbe saṅkhārā aniccā» (Dhp 277). В практике Гое́нки постигается через непрерывную смену ощущений (vedanā).'
+  parents:
+  - tilakkhaṇa
+  children: []
+  see_also:
+  - udayabbaya
+  - bhaṅga
+  - sampajañña
+  - Aniccā vata saṅkhārā
+  - vipariṇāma-dukkhatā
+  - kalāpa
+  - dhamma-cakkhu
+  - animitta
+  - navasivathikā
+  - bhavarāga
+  opposites:
+  - term: nicca
+    gloss: постоянное
+  nid: 1794139124188
+  cid: 1794139124189
+  guid: 'p/2c`D71Fc'
+- term: dukkha
+  reading: ду́ккха
+  translation: страдание, неудовлетворительность
+  explanation: 'Непостоянное (anicca) не может дать прочного удовлетворения: «sabbe saṅkhārā dukkhā» (Dhp 278). Также — неприятное ощущение (dukkhā vedanā) и первая благородная истина (dukkha-sacca); три вида dukkha перечислены в SN 38.14.'
+  parents:
+  - tilakkhaṇa
+  children:
+  - dukkha-dukkhatā
+  - saṅkhāra-dukkhatā
+  - vipariṇāma-dukkhatā
+  see_also:
+  - dukkha-sacca
+  - dukkhā vedanā
+  - ādīnava-ñāṇa
+  - appaṇihita
+  - pañcupādānakkhandha
+  opposites:
+  - sukha
+  nid: 1794139124190
+  cid: 1794139124191
+  guid: 'b8+`(w,<EL'
+- term: dukkha-dukkhatā
+  reading: ду́ккха-ду́ккхата
+  translation: страдание как боль
+  explanation: 'Прямое страдание: телесная боль и душевная мука; по комментариям, связано с неприятным ощущением (dukkhā vedanā).'
+  parents:
+  - dukkha
+  children: []
+  see_also: []
+  opposites: []
+  nid: 1794139124192
+  cid: 1794139124193
+  guid: 'q]IDGS{vtV'
+- term: saṅkhāra-dukkhatā
+  reading: санкха́ра-ду́ккхата
+  translation: страдание обусловленности
+  explanation: 'Неудовлетворительность всего обусловленного (saṅkhata), даже приятного и нейтрального: оно непостоянно и не даёт опоры. По комментариям, именно в этом смысле dukkha — одна из трёх характеристик.'
+  parents:
+  - dukkha
+  children: []
+  see_also:
+  - saṅkhata
+  - adukkhamasukhā vedanā
+  opposites: []
+  nid: 1794139124194
+  cid: 1794139124195
+  guid: 'M$bt.I7kk9'
+- term: vipariṇāma-dukkhatā
+  reading: випарина́ма-ду́ккхата
+  translation: страдание изменчивости
+  explanation: 'Страдание от перемен: приятное (sukhā vedanā) оборачивается болью, когда проходит.'
+  parents:
+  - dukkha
+  children: []
+  see_also:
+  - anicca
+  opposites: []
+  nid: 1794139124196
+  cid: 1794139124197
+  guid: 'q4o?B7YD~V'
+- term: anattā
+  reading: ана́тта
+  translation: безличность, не-я
+  explanation: 'Ни в теле (rūpa), ни в уме (nāma) нет неизменного «я» (attā) или хозяина — только процесс: «sabbe dhammā anattā» (Dhp 279). Классический довод — во второй проповеди (SN 22.59): непостоянное неудовлетворительно, а неудовлетворительное не может быть «я».'
+  parents:
+  - tilakkhaṇa
+  children: []
+  see_also:
+  - pañcakkhandha
+  - sakkāya-diṭṭhi
+  - paññatti
+  - suññatā
+  - sammutisacca
+  opposites:
+  - term: attā
+    gloss: «я», самость
+  nid: 1794139124198
+  cid: 1794139124199
+  guid: 'IsPQohYy5~'
+- term: paṭicca-samuppāda
+  reading: пати́чча-самуппа́да
+  translation: взаимозависимое возникновение
+  explanation: 'Двенадцатизвенная цепь причин (SN 12.1), порождающая страдание и круговорот рождений (saṃsāra). Гое́нка выделяет звено vedanā → taṇhā: невозмутимость (upekkhā) к ощущениям разрывает цепь.'
+  parents:
+  - section: Учение
+  children:
+  - avijjā
+  - saṅkhāra
+  - viññāṇa
+  - nāmarūpa
+  - saḷāyatana
+  - phassa
+  - vedanā
+  - taṇhā
+  - upādāna
+  - bhava
+  - jāti
+  - jarā-maraṇa
+  see_also:
+  - saṃsāra
+  - kamma
+  - saṅkhata
+  - paccaya-pariggaha-ñāṇa
+  - kaṅkhāvitaraṇa-visuddhi
+  opposites: []
+  nid: 1794139124200
+  cid: 1794139124201
+  guid: 'B]V5Y|^R=1'
+- term: avijjā
+  reading: ави́джа
+  translation: неведение
+  explanation: Незнание четырёх истин (ariyasacca) и истинной природы явлений. Первое звено цепи и последняя из десяти оков (saṃyojana).
+  parents:
+  - paṭicca-samuppāda
+  - saṃyojana
+  - anusaya
+  children: []
+  see_also:
+  - moha
+  - pañcuddhambhāgiyāni saṃyojanāni
+  opposites: []
+  nid: 1794139124202
+  cid: 1794139124203
+  guid: 'ba*J{b;V/c'
+- term: nāmarūpa
+  reading: намару́па
+  translation: ум и материя (букв. «имя и форма»)
+  explanation: Психофизический поток, который принимают за «я». Четвёртое звено цепи; в випа́ссане — то, что исследуется напрямую.
+  parents:
+  - paṭicca-samuppāda
+  children:
+  - nāma
+  - rūpa
+  see_also:
+  - pañcakkhandha
+  - nāmarūpa-pariccheda-ñāṇa
+  - upādāyarūpa
+  opposites: []
+  nid: 1794139124234
+  cid: 1794139124235
+  guid: 'D[oRo!1b;8'
+- term: nāma
+  reading: на́ма
+  translation: ум, ментальное
+  explanation: Ментальная сторона опыта; по MN 9 — ощущение (vedanā), восприятие (saññā), намерение (cetanā), контакт (phassa), внимание (manasikāra).
+  parents:
+  - nāmarūpa
+  children: []
+  see_also:
+  - citta
+  - cetasika
+  opposites: []
+  nid: 1794139124236
+  cid: 1794139124237
+  guid: 'e{H%)}$GdM'
+- term: saḷāyatana
+  reading: салая́тана
+  translation: шесть сфер чувств
+  explanation: Шесть «врат» опыта — глаз (cakkhu), ухо (sota), нос (ghāna), язык (jivhā), тело (kāya), ум (mano). Пятое звено цепи. Их объекты — шесть внешних сфер (cha bāhirāni āyatanāni).
+  parents:
+  - paṭicca-samuppāda
+  children:
+  - cakkhu
+  - sota
+  - ghāna
+  - jivhā
+  - kāya
+  - mano
+  see_also:
+  - phassa
+  - cha bāhirāni āyatanāni
+  - indriyasaṃvara
+  opposites: []
+  nid: 1794139124256
+  cid: 1794139124257
+  guid: 'wM-=XWV~O~'
+- term: cakkhu
+  reading: ча́ккху
+  translation: глаз
+  explanation: Орган зрения; его объект — видимое (rūpa).
+  parents:
+  - saḷāyatana
+  children: []
+  see_also:
+  - rūpa
+  opposites: []
+  nid: 1794139124258
+  cid: 1794139124259
+  guid: 'vfv<]i4GKv'
+- term: sota
+  reading: со́та
+  translation: ухо
+  explanation: Орган слуха; объект — звук (sadda). Не путать с sota «поток» в sotāpanna.
+  parents:
+  - saḷāyatana
+  children: []
+  see_also: []
+  opposites: []
+  nid: 1794139124260
+  cid: 1794139124261
+  guid: 'P(.HFPTekh'
+- term: ghāna
+  reading: гха́на
+  translation: нос
+  explanation: Орган обоняния; объект — запах (gandha).
+  parents:
+  - saḷāyatana
+  children: []
+  see_also: []
+  opposites: []
+  nid: 1794139124262
+  cid: 1794139124263
+  guid: 'BX_&y1>vW@'
+- term: jivhā
+  reading: джи́вха
+  translation: язык
+  explanation: Орган вкуса; объект — вкус (rasa).
+  parents:
+  - saḷāyatana
+  children: []
+  see_also: []
+  opposites: []
+  nid: 1794139124264
+  cid: 1794139124265
+  guid: 'B5h_-eKW{P'
+- term: kāya
+  reading: ка́я
+  translation: тело
+  explanation: Орган осязания; объект — осязаемое (phoṭṭhabba). Также — тело в целом, как в kāyānupassanā.
+  parents:
+  - saḷāyatana
+  children: []
+  see_also:
+  - kāyānupassanā
+  - iriyāpatha
+  - paṭikūlamanasikāra
+  - dhātumanasikāra
+  - navasivathikā
+  opposites: []
+  nid: 1794139124266
+  cid: 1794139124267
+  guid: 'tMmvqy)v`F'
+- term: mano
+  reading: ма́но
+  translation: ум (шестая сфера чувств)
+  explanation: Шестая «дверь»; её объекты — мысли и другие ментальные явления (dhammā).
+  parents:
+  - saḷāyatana
+  children: []
+  see_also:
+  - citta
+  opposites: []
+  nid: 1794139124268
+  cid: 1794139124269
+  guid: 'd7HUjIYS?s'
+- term: taṇhā
+  reading: та́нха
+  translation: жажда
+  explanation: 'Причина страдания — вторая истина (samudaya-sacca) — и восьмое звено цепи. У Гое́нки — слепая реакция на ощущения (vedanā): тяга к приятному и отталкивание неприятного.'
+  parents:
+  - paṭicca-samuppāda
+  children:
+  - kāma-taṇhā
+  - bhava-taṇhā
+  - vibhava-taṇhā
+  see_also:
+  - samudaya-sacca
+  - lobha
+  - rāga
+  - upādāna
+  - vedanā
+  - punabbhava
+  opposites: []
+  nid: 1794139124204
+  cid: 1794139124205
+  guid: 'e$M4QJgmP$'
+- term: kāma-taṇhā
+  reading: ка́ма-та́нха
+  translation: жажда чувственных удовольствий
+  explanation: 'Тяга к приятному в пяти «нитях» чувственности (pañca kāmaguṇa): образам, звукам, запахам, вкусам и касаниям.'
+  parents:
+  - taṇhā
+  children: []
+  see_also:
+  - kāmacchanda
+  - kāmarāga
+  opposites: []
+  nid: 1794139124206
+  cid: 1794139124207
+  guid: 'fPt4S~,}Bt'
+- term: bhava-taṇhā
+  reading: бха́ва-та́нха
+  translation: жажда существования
+  explanation: Тяга быть, становиться, продолжаться; по комментариям, связана с воззрением вечности (sassata-diṭṭhi).
+  parents:
+  - taṇhā
+  children: []
+  see_also:
+  - bhava
+  - bhavarāga
+  opposites: []
+  nid: 1794139124208
+  cid: 1794139124209
+  guid: 'l?v[>R#C?8'
+- term: vibhava-taṇhā
+  reading: ви́бхава-та́нха
+  translation: жажда несуществования
+  explanation: Тяга к несуществованию, к уничтожению «я» (в практике Гое́нки — и к избавлению от неприятного); по комментариям, связана с воззрением уничтожения (uccheda-diṭṭhi).
+  parents:
+  - taṇhā
+  children: []
+  see_also:
+  - dosa
+  opposites: []
+  nid: 1794139124210
+  cid: 1794139124211
+  guid: 'cl4h$L~$;x'
+- term: upādāna
+  reading: упада́на
+  translation: цепляние
+  explanation: 'Жажда (taṇhā), превратившаяся в хватку; девятое звено. Четыре вида: к чувственному (kāmupādāna), к воззрениям (diṭṭhupādāna), к обрядам и правилам (sīlabbatupādāna), к учению о «я» (attavādupādāna).'
+  parents:
+  - paṭicca-samuppāda
+  children: []
+  see_also:
+  - taṇhā
+  - pañcakkhandha
+  - pañcupādānakkhandha
+  - diṭṭhi
+  opposites: []
+  nid: 1794139124212
+  cid: 1794139124213
+  guid: 'MRd17e,ZnK'
+- term: bhava
+  reading: бха́ва
+  translation: становление, существование
+  explanation: Процесс становления, ведущий к новому рождению (jāti); десятое звено.
+  parents:
+  - paṭicca-samuppāda
+  children: []
+  see_also:
+  - bhava-taṇhā
+  - saṃsāra
+  - punabbhava
+  opposites: []
+  nid: 1794139124214
+  cid: 1794139124215
+  guid: 'hZM:qCW^dy'
+- term: jāti
+  reading: джа́ти
+  translation: рождение
+  explanation: 'Одиннадцатое звено: появление совокупностей (khandha) в новом существовании.'
+  parents:
+  - paṭicca-samuppāda
+  children: []
+  see_also:
+  - saṃsāra
+  - punabbhava
+  - paṭisandhi
+  - ekabījī
+  opposites: []
+  nid: 1794139124216
+  cid: 1794139124217
+  guid: 'A,`nju2H9M'
+- term: jarā-maraṇa
+  reading: джа́ра-ма́рана
+  translation: старость и смерть
+  explanation: Двенадцатое звено; вместе с печалью (soka), плачем (parideva), болью (dukkha), горем (domanassa) и отчаянием (upāyāsa) — «вся масса страдания» (dukkhakkhandha).
+  parents:
+  - paṭicca-samuppāda
+  children: []
+  see_also:
+  - dukkha-sacca
+  opposites: []
+  nid: 1794139124218
+  cid: 1794139124219
+  guid: 'ChD7j)24I)'
+- term: saṃsāra
+  reading: санса́ра
+  translation: круговорот рождений
+  explanation: 'Букв. «блуждание»: бесконечная череда рождений и смертей, поддерживаемая неведением (avijjā) и жаждой (taṇhā); начало её не видно (SN 15.1).'
+  parents:
+  - section: Учение
+  children:
+  - punabbhava
+  - paṭisandhi
+  see_also:
+  - jāti
+  - paṭicca-samuppāda
+  - bhava
+  - saṃyojana
+  - kolaṅkola
+  opposites:
+  - nibbāna
+  nid: 1794139124220
+  cid: 1794139124221
+  guid: 'z*pNu[rVa>'
+- term: punabbhava
+  reading: пуна́ббхава
+  translation: повторное существование, новое рождение
+  explanation: 'Новое становление после смерти (puna «снова» + bhava). Жажда (taṇhā) — ponobbhavikā, «ведущая к новому существованию» (SN 56.11). Бу́дда о себе: «natthi dāni punabbhavo» — «нового существования больше нет».'
+  parents:
+  - saṃsāra
+  children: []
+  see_also:
+  - taṇhā
+  - bhava
+  - jāti
+  - paṭisandhi
+  opposites: []
+  nid: 1795473553090
+  cid: 1795473553091
+  guid: 'BU`R<1Z=P-'
+- term: paṭisandhi
+  reading: патиса́ндхи
+  translation: связь с новым рождением
+  explanation: 'В Абхидха́мме и комментариях — функция (kicca) ума (citta) в первый миг новой жизни: он «соединяет» её с прежней. Следом идёт bhavaṅga, жизнь завершает cuti.'
+  parents:
+  - saṃsāra
+  children: []
+  see_also:
+  - viññāṇa
+  - citta
+  - jāti
+  - punabbhava
+  opposites: []
+  nid: 1795473553102
+  cid: 1795473553103
+  guid: 'uR3=/MUAl{'
+- term: kamma
+  reading: ка́мма
+  translation: намеренное действие, карма
+  explanation: 'Действие тела, речи или ума (kāya, vacī, mano), движимое намерением (cetanā): «намерение я называю ка́ммой» (AN 6.63). Каждое оставляет след, который при подходящих условиях созревает (vipāka).'
+  parents:
+  - section: Учение
+  children:
+  - kammassakatā
+  see_also:
+  - vipāka
+  - cetanā
+  - saṅkhāra
+  - sammā-diṭṭhi
+  - paṭicca-samuppāda
+  - Jātaka
+  opposites: []
+  nid: 1794139124222
+  cid: 1794139124223
+  guid: 'mef~$oqW3;'
+- term: kammassakatā
+  reading: каммасса́ката
+  translation: владение своей ка́ммой
+  explanation: 'Осознание, что ты владелец своих поступков: «kammassakomhi kammadāyādo» — «я владелец ка́ммы, наследник ка́ммы» (AN 5.57). В AN 5.161 — способ унять обиду на человека: «kammassako ayamāyasmā» — он владелец своей ка́ммы.'
+  parents:
+  - kamma
+  children: []
+  see_also:
+  - vipāka
+  - cetanā
+  - khanti
+  opposites: []
+  nid: 1795473553092
+  cid: 1795473553093
+  guid: 'MKxO6Ws@r%'
+- term: vipāka
+  reading: випа́ка
+  translation: плод ка́ммы
+  explanation: Результат прошлых намеренных действий (kamma), переживаемый как приятный, неприятный или нейтральный опыт; но не всякое ощущение — плод ка́ммы (SN 36.21).
+  parents:
+  - section: Учение
+  children: []
+  see_also:
+  - kamma
+  - vedanā
+  - kammassakatā
+  opposites: []
+  nid: 1794139124224
+  cid: 1794139124225
+  guid: 'N<Hpj(09ts'
+- term: paramattha-dhamma
+  reading: парама́ттха-дха́мма
+  translation: четыре высшие реальности
+  explanation: 'Категория Абхидха́ммы (Abhidhammattha-saṅgaha): то, что существует в высшем смысле, а не как понятие (paññatti), — ум (citta), ментальные факторы (cetasika), материя (rūpa) и нибба́на (nibbāna). Объект випа́ссаны — первые три, обусловленные; нибба́на — объект пути и плода.'
+  parents:
+  - section: Учение
+  children:
+  - citta
+  - cetasika
+  - rūpa
+  - nibbāna
+  see_also:
+  - saṅkhata
+  - asaṅkhata
+  - Abhidhamma-piṭaka
+  - sammutisacca
+  opposites:
+  - paññatti
+  nid: 1794139124226
+  cid: 1794139124227
+  guid: 'uUxi`4sB>d'
+- term: citta
+  reading: чи́тта
+  translation: ум, состояние ума
+  explanation: Сознающее начало. По Абхидха́мме в каждый момент возникает одно состояние ума вместе с сопутствующими факторами (cetasika).
+  parents:
+  - paramattha-dhamma
+  - iddhipāda
+  children: []
+  see_also:
+  - viññāṇa
+  - mano
+  - cittānupassanā
+  - nāma
+  - cetasika
+  - sabbacittasādhāraṇa
+  - paṭisandhi
+  opposites: []
+  nid: 1794139124284
+  cid: 1794139124285
+  guid: 'Qs,7L=$Z@p'
+- term: cetasika
+  reading: чета́сика
+  translation: ментальные факторы
+  explanation: 'Качества, сопровождающие каждый момент ума (citta): контакт (phassa), ощущение (vedanā), восприятие (saññā), намерение (cetanā), внимание (manasikāra) и другие. Одни есть в каждом моменте ума, другие — благие (kusala) или неблагие (akusala) — лишь в некоторых. В Абхидха́мме их 52.'
+  parents:
+  - paramattha-dhamma
+  children:
+  - phassa
+  - vedanā
+  - saññā
+  - cetanā
+  - manasikāra
+  - ekaggatā
+  - sabbacittasādhāraṇa
+  see_also:
+  - citta
+  - nāma
+  opposites: []
+  nid: 1794139124286
+  cid: 1794139124287
+  guid: 'pK*hD2~8Qq'
+- term: phassa
+  reading: пха́сса
+  translation: контакт
+  explanation: 'Встреча органа чувств, объекта и сознания (viññāṇa); шестое звено. Из контакта рождается ощущение: phassa-paccayā vedanā.'
+  parents:
+  - paṭicca-samuppāda
+  - cetasika
+  children: []
+  see_also:
+  - vedanā
+  - saḷāyatana
+  - cha bāhirāni āyatanāni
+  - sabbacittasādhāraṇa
+  opposites: []
+  nid: 1794139124270
+  cid: 1794139124271
+  guid: 'cIM5.f+N+q'
+- term: cetanā
+  reading: че́тана
+  translation: намерение, воление
+  explanation: Ментальный фактор (cetasika), направляющий ум к действию. Именно намерение Бу́дда называл ка́ммой.
+  parents:
+  - cetasika
+  children: []
+  see_also:
+  - kamma
+  - saṅkhāra
+  - kammassakatā
+  opposites: []
+  nid: 1794139124288
+  cid: 1794139124289
+  guid: 'I1BL0pW:^h'
+- term: manasikāra
+  reading: манасика́ра
+  translation: внимание
+  explanation: Обращение ума к объекту. Yoniso manasikāra — мудрое внимание, видящее явления как они есть; ayoniso — немудрое, питающее загрязнения (kilesa).
+  parents:
+  - cetasika
+  children:
+  - yoniso manasikāra
+  see_also:
+  - sati
+  opposites: []
+  nid: 1794139124290
+  cid: 1794139124291
+  guid: 'zXJaX<1<lt'
+- term: yoniso manasikāra
+  reading: йо́нисо манасика́ра
+  translation: мудрое внимание
+  explanation: 'Внимание, обращённое к истинной природе явлений: непостоянное видится как непостоянное (anicca). Третий фактор вхождения в поток; питает факторы пробуждения (bojjhaṅga).'
+  parents:
+  - manasikāra
+  - sotāpattiyaṅga
+  children: []
+  see_also:
+  - satta bojjhaṅgā
+  - dhamma-vicaya
+  opposites:
+  - term: ayoniso manasikāra
+    gloss: немудрое внимание, питающее загрязнения
+  nid: 1794139124336
+  cid: 1794139124337
+  guid: 'w%/^hfb%/R'
+- term: ekaggatā
+  reading: эка́ггата
+  translation: однонаправленность ума
+  explanation: Собранность ума на одном объекте — суть сосредоточения (samādhi). По Абхидха́мме в слабой форме она есть в каждом моменте ума.
+  parents:
+  - cetasika
+  - jhāna
+  children: []
+  see_also:
+  - samādhi
+  - sammā-samādhi
+  opposites: []
+  nid: 1794139124292
+  cid: 1794139124293
+  guid: 'yt,X!,}gv9'
+- term: sabbacittasādhāraṇa
+  reading: саббачиттасадха́рана
+  translation: универсальные ментальные факторы
+  explanation: 'Термин Абхидха́ммы: семь факторов (cetasika), присутствующих в каждом моменте ума (citta): phassa, vedanā, saññā, cetanā, ekaggatā, jīvitindriya и manasikāra.'
+  parents:
+  - cetasika
+  children: []
+  see_also:
+  - citta
+  - phassa
+  - vedanā
+  - saññā
+  opposites: []
+  nid: 1795473553098
+  cid: 1795473553099
+  guid: 'f5.>R]<[]2'
+- term: nibbāna
+  reading: нибба́на
+  translation: угасание, освобождение
+  explanation: 'Букв. «угасание» огня страсти (rāga), ненависти (dosa) и заблуждения (moha); полное прекращение страдания. Необусловленное (asaṅkhata) — то, что не возникает и не исчезает. Два вида (Itivuttaka 44): с остатком (saupādisesa) — у живого арха́та, без остатка (anupādisesa) — после его кончины.'
+  parents:
+  - paramattha-dhamma
+  children:
+  - saupādisesā nibbānadhātu
+  - anupādisesā nibbānadhātu
+  see_also:
+  - nirodha-sacca
+  - magga-ñāṇa
+  - asaṅkhata
+  - phala-ñāṇa
+  - arahant
+  - ñāṇadassana-visuddhi
+  - vimokkha-mukha
+  - lokuttara
+  - Aniccā vata saṅkhārā
+  - ekāyano maggo
+  opposites:
+  - saṃsāra
+  nid: 1794139124496
+  cid: 1794139124497
+  guid: 'e8q(W8(oLG'
+- term: saupādisesā nibbānadhātu
+  reading: саупадисе́са ниббанадха́ту
+  translation: нибба́на с остатком
+  explanation: 'Нибба́на арха́та, пока он жив (Itivuttaka 44): пять органов чувств ещё действуют, приятное и неприятное он чувствует, но страсти, ненависти и заблуждения уже нет (rāgakkhayo, dosakkhayo, mohakkhayo).'
+  parents:
+  - nibbāna
+  children: []
+  see_also:
+  - arahant
+  - vedanā
+  opposites:
+  - anupādisesā nibbānadhātu
+  nid: 1795473553126
+  cid: 1795473553127
+  guid: 'Aj`E,4*t(('
+- term: anupādisesā nibbānadhātu
+  reading: анупадисе́са ниббанадха́ту
+  translation: нибба́на без остатка
+  explanation: 'Нибба́на арха́та после смерти (Itivuttaka 44): всё чувствуемое, уже не радующее, «остынет здесь же» (sabbavedayitāni anabhinanditāni sīti bhavissanti); в стихах — «относящаяся к будущему» (samparāyikā).'
+  parents:
+  - nibbāna
+  children: []
+  see_also:
+  - arahant
+  - vedanā
+  - asaṅkhata
+  opposites:
+  - saupādisesā nibbānadhātu
+  nid: 1795473553128
+  cid: 1795473553129
+  guid: 'ibai]sF^B!'
+- term: paññatti
+  reading: пання́тти
+  translation: понятие, условное обозначение
+  explanation: Имена и понятия — «я», «человек», «рука», — которыми называют совокупности высших реальностей. У Гое́нки близкое понятие — «кажущаяся истина» (sammutisacca), от которой практика ведёт к высшей.
+  parents:
+  - section: Учение
+  children: []
+  see_also:
+  - anattā
+  - pañcakkhandha
+  - sammutisacca
+  opposites:
+  - paramattha-dhamma
+  nid: 1794139124228
+  cid: 1794139124229
+  guid: 'p;^nuH|)s<'
+- term: saṅkhata
+  reading: са́нкхата
+  translation: обусловленное
+  explanation: 'Всё, что возникает из причин и условий: у него заметны возникновение, исчезновение и изменение (AN 3.47). Эти три признака (saṅkhatalakkhaṇa) — не то же, что три характеристики (tilakkhaṇa), которые ему тоже присущи.'
+  parents:
+  - section: Учение
+  children: []
+  see_also:
+  - tilakkhaṇa
+  - saṅkhāra
+  - paṭicca-samuppāda
+  - saṅkhāra-dukkhatā
+  - paramattha-dhamma
+  opposites:
+  - asaṅkhata
+  nid: 1794139124230
+  cid: 1794139124231
+  guid: 'ESqU9%i/u*'
+- term: asaṅkhata
+  reading: аса́нкхата
+  translation: необусловленное
+  explanation: 'То, у чего нет ни возникновения, ни исчезновения, ни изменения (AN 3.47), — нибба́на (nibbāna): угасание страсти, ненависти и заблуждения (SN 43.12).'
+  parents:
+  - section: Учение
+  children: []
+  see_also:
+  - nibbāna
+  - paramattha-dhamma
+  - lokuttara
+  - anupādisesā nibbānadhātu
+  opposites:
+  - saṅkhata
+  nid: 1794139124232
+  cid: 1794139124233
+  guid: 'obPGD304xM'
+- term: sammutisacca
+  reading: саммутиса́чча
+  translation: кажущаяся истина (условная истина)
+  explanation: 'В комментариях — истина по условности («человек», «я», «рука»); ей противопоставлена paramatthasacca, высшая истина. В традиции Гое́нки — «кажущаяся истина»: видеть нужно и её, и высшую.'
+  parents:
+  - section: Учение
+  children: []
+  see_also:
+  - paññatti
+  - paramattha-dhamma
+  - anattā
+  opposites:
+  - term: paramatthasacca
+    gloss: высшая истина
+  nid: 1795473553100
+  cid: 1795473553101
+  guid: 'xe)UnIGkV+'
